@@ -63,7 +63,7 @@ const part = [
     href: "https://prof-dialog.ru",
   },
   {
-    src: "images/0b67be88-cc37-48b7-bc9b-c470f8fa542b.png",
+    src: "images/edf8521e-76b0-429c-92e5-a5f057a97034.png",
     title: "Школа саморегуляции",
     href: "https://natalie-school.ru",
   },
