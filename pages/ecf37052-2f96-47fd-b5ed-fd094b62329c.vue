@@ -40,6 +40,7 @@ const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
 
+
 const part = [
   {
     src: "images/0b824cb3-7b69-474f-8367-6a786ea48537.png",
