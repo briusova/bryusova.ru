@@ -62,6 +62,11 @@ const part = [
     title: "Компания Проф-Диалог",
     href: "https://prof-dialog.ru",
   },
+  {
+    src: "images/0b67be88-cc37-48b7-bc9b-c470f8fa542b.png",
+    title: "Школа саморегуляции",
+    href: "https://natalie-school.ru",
+  },
 ];
 </script>
 
