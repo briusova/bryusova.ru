@@ -26,7 +26,7 @@
     <div class="mt-14 px-4 md:px-8">
       <p class="text-center text-sm text-gray-700 font-semibold">Мои партнёры</p>
       <div class="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 mt-6 text-gray-600 text-sm">
-        <a class="w-64 flex flex-col pa-4 items-center rounded-xl text-center hover:shadow-2xl"
+        <a class="w-64 flex flex-col pa-4 items-center rounded-xl text-center hover:shadow-xl"
           v-for="{ src, title, href } in part" :href="href" target="_blank" rel="noopener noreferrer"><img :src="src"
             class="h-20 mb-2 rounded" decoding="async">{{ title }}</a>
       </div>
@@ -63,9 +63,14 @@ const part = [
     href: "https://prof-dialog.ru",
   },
   {
-    src: "images/edf8521e-76b0-429c-92e5-a5f057a97034.png",
+    src: "my_images/school.png",
     title: "Школа саморегуляции",
     href: "https://natalie-school.ru",
+  },
+  {
+    src: "my_images/nanm.png",
+    title: "НАМН",
+    href: "https://nanmprof.org",
   },
 ];
 </script>
