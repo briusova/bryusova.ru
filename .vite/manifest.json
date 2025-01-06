@@ -1,60 +1,22 @@
 {
-  "../node_modules/ofetch/dist/index.mjs": {
-    "file": "assets/ofetch-DfaEl5Lr.js",
-    "name": "ofetch",
-    "src": "../node_modules/ofetch/dist/index.mjs",
-    "isDynamicEntry": true,
-    "imports": [
-      "_destr-CVtkxrq9.js",
-      "_ufo-CsG24Xhf.js"
-    ]
-  },
-  "_ajv-BS_TGhCq.js": {
-    "file": "assets/ajv-BS_TGhCq.js",
-    "name": "ajv",
-    "imports": [
-      "_fast-deep-equal-C148XJoK.js",
-      "_json-schema-traverse-B8kO9W2y.js",
-      "_fast-uri-IWLU8Qy7.js"
-    ]
-  },
-  "_ajv-keywords-CbYRO2bl.js": {
-    "file": "assets/ajv-keywords-CbYRO2bl.js",
-    "name": "ajv-keywords",
-    "imports": [
-      "_ajv-BS_TGhCq.js"
-    ]
-  },
   "_destr-CVtkxrq9.js": {
     "file": "assets/destr-CVtkxrq9.js",
     "name": "destr"
-  },
-  "_fast-deep-equal-C148XJoK.js": {
-    "file": "assets/fast-deep-equal-C148XJoK.js",
-    "name": "fast-deep-equal"
-  },
-  "_fast-uri-IWLU8Qy7.js": {
-    "file": "assets/fast-uri-IWLU8Qy7.js",
-    "name": "fast-uri"
   },
   "_hookable-B8xFkYCm.js": {
     "file": "assets/hookable-B8xFkYCm.js",
     "name": "hookable"
   },
-  "_iconify-DZNnka9g.js": {
-    "file": "assets/iconify-DZNnka9g.js",
+  "_iconify-B_9Z2IXi.js": {
+    "file": "assets/iconify-B_9Z2IXi.js",
     "name": "iconify"
   },
   "_jridgewell-9KHfGwW6.js": {
     "file": "assets/jridgewell-9KHfGwW6.js",
     "name": "jridgewell"
   },
-  "_json-schema-traverse-B8kO9W2y.js": {
-    "file": "assets/json-schema-traverse-B8kO9W2y.js",
-    "name": "json-schema-traverse"
-  },
-  "_magic-string-CUto1T76.js": {
-    "file": "assets/magic-string-CUto1T76.js",
+  "_magic-string-D9CdRQHO.js": {
+    "file": "assets/magic-string-D9CdRQHO.js",
     "name": "magic-string",
     "imports": [
       "_jridgewell-9KHfGwW6.js"
@@ -71,32 +33,29 @@
       "_hookable-B8xFkYCm.js"
     ]
   },
-  "_unocss-DaoZmw1x.css": {
-    "file": "assets/unocss-DaoZmw1x.css",
-    "src": "_unocss-DaoZmw1x.css"
-  },
-  "_unocss-wdJ5ViKv.js": {
-    "file": "assets/unocss-wdJ5ViKv.js",
+  "_unocss-6cHglVlK.js": {
+    "file": "assets/unocss-6cHglVlK.js",
     "name": "unocss",
     "imports": [
-      "../node_modules/ofetch/dist/index.mjs",
-      "_magic-string-CUto1T76.js"
+      "node_modules/ofetch/dist/index.mjs",
+      "_magic-string-D9CdRQHO.js"
     ],
     "dynamicImports": [
-      "../node_modules/ofetch/dist/index.mjs",
-      "../node_modules/ofetch/dist/index.mjs",
-      "../node_modules/ofetch/dist/index.mjs"
+      "node_modules/ofetch/dist/index.mjs",
+      "node_modules/ofetch/dist/index.mjs",
+      "node_modules/ofetch/dist/index.mjs"
     ],
     "css": [
-      "assets/unocss-DaoZmw1x.css"
+      "assets/unocss-DeJTMLhw.css"
     ]
   },
-  "_uuid-random-sjnZL2g3.js": {
-    "file": "assets/uuid-random-sjnZL2g3.js",
-    "name": "uuid-random",
-    "imports": [
-      "_ajv-BS_TGhCq.js"
-    ]
+  "_unocss-DeJTMLhw.css": {
+    "file": "assets/unocss-DeJTMLhw.css",
+    "src": "_unocss-DeJTMLhw.css"
+  },
+  "_uuid-C_lTrkZC.js": {
+    "file": "assets/uuid-C_lTrkZC.js",
+    "name": "uuid"
   },
   "_vue-Cow_pXkh.js": {
     "file": "assets/vue-Cow_pXkh.js",
@@ -113,33 +72,33 @@
     "file": "assets/vue3-sfc-loader-CoUr1SK8.js",
     "name": "vue3-sfc-loader"
   },
-  "_vueuse-Bs6x0GOr.js": {
-    "file": "assets/vueuse-Bs6x0GOr.js",
+  "_vues3-C2L1g2Uv.js": {
+    "file": "assets/vues3-C2L1g2Uv.js",
+    "name": "vues3"
+  },
+  "_vueuse-BCBbjqoF.js": {
+    "file": "assets/vueuse-BCBbjqoF.js",
     "name": "vueuse"
   },
   "index.html": {
-    "file": "assets/index-_HcCHwxq.js",
+    "file": "assets/index-DNowIob5.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
-      "_unocss-wdJ5ViKv.js",
-      "_ajv-BS_TGhCq.js",
-      "_ajv-keywords-CbYRO2bl.js",
-      "_uuid-random-sjnZL2g3.js",
-      "_iconify-DZNnka9g.js",
+      "_unocss-6cHglVlK.js",
+      "_vues3-C2L1g2Uv.js",
+      "_iconify-B_9Z2IXi.js",
       "_unhead-CEwDqR4t.js",
       "_vue-router-Db1rCyv1.js",
-      "_vueuse-Bs6x0GOr.js",
+      "_vueuse-BCBbjqoF.js",
       "_vue3-sfc-loader-CoUr1SK8.js",
-      "../node_modules/ofetch/dist/index.mjs",
+      "_uuid-C_lTrkZC.js",
+      "node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CUto1T76.js",
+      "_magic-string-D9CdRQHO.js",
       "_jridgewell-9KHfGwW6.js",
-      "_fast-deep-equal-C148XJoK.js",
-      "_json-schema-traverse-B8kO9W2y.js",
-      "_fast-uri-IWLU8Qy7.js",
       "_hookable-B8xFkYCm.js",
       "_vue-Cow_pXkh.js"
     ],
@@ -152,36 +111,42 @@
       "assets/index-vGiKZPT9.css"
     ]
   },
+  "node_modules/ofetch/dist/index.mjs": {
+    "file": "assets/ofetch-DfaEl5Lr.js",
+    "name": "ofetch",
+    "src": "node_modules/ofetch/dist/index.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_destr-CVtkxrq9.js",
+      "_ufo-CsG24Xhf.js"
+    ]
+  },
   "src/views/MultiView.vue": {
-    "file": "assets/MultiView-Chml3lZF.js",
+    "file": "assets/MultiView-CktD1JSp.js",
     "name": "MultiView",
     "src": "src/views/MultiView.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vueuse-Bs6x0GOr.js",
-      "index.html",
+      "_vues3-C2L1g2Uv.js",
+      "_vueuse-BCBbjqoF.js",
       "_vue-router-Db1rCyv1.js",
-      "_unocss-wdJ5ViKv.js",
-      "../node_modules/ofetch/dist/index.mjs",
+      "index.html",
+      "_uuid-C_lTrkZC.js",
+      "_vue-Cow_pXkh.js",
+      "_unocss-6cHglVlK.js",
+      "node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CUto1T76.js",
+      "_magic-string-D9CdRQHO.js",
       "_jridgewell-9KHfGwW6.js",
-      "_ajv-BS_TGhCq.js",
-      "_fast-deep-equal-C148XJoK.js",
-      "_json-schema-traverse-B8kO9W2y.js",
-      "_fast-uri-IWLU8Qy7.js",
-      "_ajv-keywords-CbYRO2bl.js",
-      "_uuid-random-sjnZL2g3.js",
-      "_iconify-DZNnka9g.js",
+      "_iconify-B_9Z2IXi.js",
       "_unhead-CEwDqR4t.js",
       "_hookable-B8xFkYCm.js",
-      "_vue3-sfc-loader-CoUr1SK8.js",
-      "_vue-Cow_pXkh.js"
+      "_vue3-sfc-loader-CoUr1SK8.js"
     ]
   },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-Damo02JP.js",
+    "file": "assets/NotFoundView-DGMX4SZZ.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
@@ -189,50 +154,42 @@
       "_unhead-CEwDqR4t.js",
       "index.html",
       "_hookable-B8xFkYCm.js",
-      "_unocss-wdJ5ViKv.js",
-      "../node_modules/ofetch/dist/index.mjs",
+      "_unocss-6cHglVlK.js",
+      "node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CUto1T76.js",
+      "_magic-string-D9CdRQHO.js",
       "_jridgewell-9KHfGwW6.js",
-      "_ajv-BS_TGhCq.js",
-      "_fast-deep-equal-C148XJoK.js",
-      "_json-schema-traverse-B8kO9W2y.js",
-      "_fast-uri-IWLU8Qy7.js",
-      "_ajv-keywords-CbYRO2bl.js",
-      "_uuid-random-sjnZL2g3.js",
-      "_iconify-DZNnka9g.js",
+      "_vues3-C2L1g2Uv.js",
+      "_iconify-B_9Z2IXi.js",
       "_vue-router-Db1rCyv1.js",
       "_vue-Cow_pXkh.js",
-      "_vueuse-Bs6x0GOr.js",
-      "_vue3-sfc-loader-CoUr1SK8.js"
+      "_vueuse-BCBbjqoF.js",
+      "_vue3-sfc-loader-CoUr1SK8.js",
+      "_uuid-C_lTrkZC.js"
     ]
   },
   "src/views/SingleView.vue": {
-    "file": "assets/SingleView-DI7lUsIl.js",
+    "file": "assets/SingleView-B9sNzoeJ.js",
     "name": "SingleView",
     "src": "src/views/SingleView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_unocss-wdJ5ViKv.js",
-      "../node_modules/ofetch/dist/index.mjs",
+      "_uuid-C_lTrkZC.js",
+      "_unocss-6cHglVlK.js",
+      "node_modules/ofetch/dist/index.mjs",
       "_destr-CVtkxrq9.js",
       "_ufo-CsG24Xhf.js",
-      "_magic-string-CUto1T76.js",
+      "_magic-string-D9CdRQHO.js",
       "_jridgewell-9KHfGwW6.js",
-      "_ajv-BS_TGhCq.js",
-      "_fast-deep-equal-C148XJoK.js",
-      "_json-schema-traverse-B8kO9W2y.js",
-      "_fast-uri-IWLU8Qy7.js",
-      "_ajv-keywords-CbYRO2bl.js",
-      "_uuid-random-sjnZL2g3.js",
-      "_iconify-DZNnka9g.js",
+      "_vues3-C2L1g2Uv.js",
+      "_iconify-B_9Z2IXi.js",
       "_unhead-CEwDqR4t.js",
       "_hookable-B8xFkYCm.js",
       "_vue-router-Db1rCyv1.js",
       "_vue-Cow_pXkh.js",
-      "_vueuse-Bs6x0GOr.js",
+      "_vueuse-BCBbjqoF.js",
       "_vue3-sfc-loader-CoUr1SK8.js"
     ]
   }
