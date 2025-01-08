@@ -73,7 +73,7 @@ const part = [
     href: "https://savamed.ru",
   },
     {
-    src: "images/logo.png",
+    src: "images/bach.png",
     title: "Цветочная терапия Баха",
     href: "bach-flowers.ru",
   },
