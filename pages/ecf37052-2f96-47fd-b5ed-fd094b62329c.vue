@@ -23,14 +23,6 @@
         <img :src="the.images[1].url" class=" md:rounded-tl-[108px]" alt="" decoding="async" />
       </div>
     </div>
-    <div class="mt-14 px-4 md:px-8">
-      <p class="text-center text-sm text-gray-700 font-semibold">Мои партнёры</p>
-      <div class="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 mt-6 text-gray-600 text-sm">
-        <a class="w-64 flex flex-col pa-4 items-center rounded-xl text-center hover:shadow-xl"
-          v-for="{ src, title, href } in part" :href="href" target="_blank" rel="noopener noreferrer"><img :src="src"
-            class="h-20 mb-2 rounded" decoding="async">{{ title }}</a>
-      </div>
-    </div>
   </section>
 </template>
 
@@ -39,45 +31,6 @@ import { inject } from "vue";
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
-
-
-const part = [
-  {
-    src: "images/0b824cb3-7b69-474f-8367-6a786ea48537.png",
-    title: "Оздоровительный Центр Комплемед",
-    href: "https://komplemed.ru",
-  },
-    {
-    src: "my_images/nanm.png",
-    title: "НАМН",
-    href: "https://nanmprof.org",
-  },
-  {
-    src: "images/89f869d7-1b3d-482c-80d9-861efe50c0ed.jpeg",
-    title: "Информационный центр Арго",
-    href: "https://argo-centr39.ru",
-  },
-  {
-    src: "images/0b67be88-cc37-48b7-bc9b-c470f8fa542b.png",
-    title: "Компания Проф-Диалог",
-    href: "https://prof-dialog.ru",
-  },
-  {
-    src: "my_images/school.png",
-    title: "Школа саморегуляции",
-    href: "https://natalie-school.ru",
-  },
-  {
-    src: "images/f21c70d4-3842-4a70-93b5-e12661856160.png",
-    title: "Компания Вся Медицина",
-    href: "https://savamed.ru",
-  },
-  {
-    src: "my_images/bach.png",
-    title: "Цветочная терапия Баха",
-    href: "https://bach-flowers.ru",
-  },
-];
 </script>
 
 <style scoped>

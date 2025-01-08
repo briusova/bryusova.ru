@@ -14,7 +14,7 @@
                     </div>
                     <div class="self-center ml-3">
                         <span class="text-red-600 font-semibold">Внимание!</span>
-                        <p class="text-red-600 mt-1">Согласно врачебной этики, все имена, фамилии и лица изменены на
+                        <p class="text-red-600 mt-1">Согласно профессиональной этики, все имена, фамилии и лица изменены на
                             случайные.</p>
                     </div>
                 </div>
