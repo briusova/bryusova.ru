@@ -75,7 +75,7 @@ const part = [
   {
     src: "my_images/bach.png",
     title: "Цветочная терапия Баха",
-    href: "bach-flowers.ru",
+    href: "https://bach-flowers.ru",
   },
 ];
 </script>
