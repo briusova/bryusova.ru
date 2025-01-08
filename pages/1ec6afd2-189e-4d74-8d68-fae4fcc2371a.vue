@@ -8,10 +8,16 @@
             class="h-20 mb-2 rounded" decoding="async">{{ title }}</a>
       </div>
     </div>
+    <div class="container mx-auto mt-28">
+    <el-divider>
+      <el-icon><star-filled /></el-icon>
+    </el-divider>
+    </div>
   </section>
 </template>
 
 <script setup>
+import { StarFilled } from '@element-plus/icons-vue';
 import { inject } from "vue";
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
