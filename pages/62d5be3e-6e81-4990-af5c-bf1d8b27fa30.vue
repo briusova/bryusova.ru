@@ -8,7 +8,7 @@
             </div>
             
 
-<ul class="not-prose list-disc">
+<ul class="not-prose list-disc list-inside">
     <li v-for="{header, to} in the.$children"><el-button tag="router-link" link :to="to">{{header}}</el-button></li>
 </ul>
 
