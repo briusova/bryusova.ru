@@ -72,6 +72,11 @@ const part = [
     title: "Компания Вся Медицина",
     href: "https://savamed.ru",
   },
+    {
+    src: "images/logo.png",
+    title: "Цветочная терапия Баха",
+    href: "bach-flowers.ru",
+  },
 ];
 </script>
 
