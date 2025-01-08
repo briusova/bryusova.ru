@@ -47,10 +47,10 @@ const part = [
     title: "Оздоровительный Центр Комплемед",
     href: "https://komplemed.ru",
   },
-  {
-    src: "images/f21c70d4-3842-4a70-93b5-e12661856160.png",
-    title: "Компания Вся Медицина",
-    href: "https://savamed.ru",
+    {
+    src: "my_images/nanm.png",
+    title: "НАМН",
+    href: "https://nanmprof.org",
   },
   {
     src: "images/89f869d7-1b3d-482c-80d9-861efe50c0ed.jpeg",
@@ -68,9 +68,9 @@ const part = [
     href: "https://natalie-school.ru",
   },
   {
-    src: "my_images/nanm.png",
-    title: "НАМН",
-    href: "https://nanmprof.org",
+    src: "images/f21c70d4-3842-4a70-93b5-e12661856160.png",
+    title: "Компания Вся Медицина",
+    href: "https://savamed.ru",
   },
 ];
 </script>
