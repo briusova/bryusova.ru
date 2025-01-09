@@ -43,7 +43,7 @@
   </ul>
   <div class="mt-8 items-center justify-between sm:flex">
     <div class="mt-4 sm:mt-0">
-      &copy; 2024 {{ the.title }}, ИНН: 771709237196
+      &copy; 2025 {{ the.title }}, ИНН: 771709237196
     </div>
     <div class="mt-6 sm:mt-0">
       <ul class="flex items-center space-x-4">

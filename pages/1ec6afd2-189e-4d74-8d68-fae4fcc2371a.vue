@@ -58,5 +58,10 @@ const part = [
     title: "Цветочная терапия Баха",
     href: "https://bach-flowers.ru",
   },
+    {
+    src: "my_images/eko.png",
+    title: "Фестиваль Экотворец",
+    href: "https://ekotvorec.ru",
+  },
 ];
 </script>
