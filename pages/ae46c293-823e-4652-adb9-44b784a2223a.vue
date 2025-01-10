@@ -100,6 +100,12 @@ const maincert = [{
 const previewSrcList = maincert.map(({ src, src2 }) => src2 ?? src);
 const cert = [
   {
+    name: "Свидетельство",
+    date: "2025 год",
+    desc: "Общероссийская профессиональная психотерапевтическая лига",
+    src: "my_images/opl.jpg"
+  },
+    {
     name: "Психолог, нумеролог-консультант",
     date: "2023 год",
     desc: "АНО \"Профессиональный стандарт\"",
