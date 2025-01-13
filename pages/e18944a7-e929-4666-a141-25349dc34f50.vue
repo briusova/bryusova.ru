@@ -49,7 +49,7 @@ const contactMethods = [
   },
   {
     icon: "la:telegram",
-    contact: "@Sasha_Bryusova",
+    contact: "https://t.me/abb_psy",
     title: "Телеграм"
   },
   {
