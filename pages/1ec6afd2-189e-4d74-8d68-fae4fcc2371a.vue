@@ -63,5 +63,10 @@ const part = [
     title: "Фестиваль Экотворец",
     href: "https://ekotvorec.ru",
   },
+      {
+    src: "my_images/book4.png",
+    title: "Мёртвые души, том 2",
+    href: "https://deadsouls2.ru",
+  },
 ];
 </script>
