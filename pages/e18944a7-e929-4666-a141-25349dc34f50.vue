@@ -12,7 +12,7 @@
           <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
           <div class="mt-3 flex items-center gap-x-3">
             <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-            <a :href="item.href">{{ item.contact }}</a>
+            <a :target="item.target && '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
           </div>
         </li>
       </ul>
@@ -29,12 +29,12 @@ const the = pages[id];
 const contactMethods = [
   {
     icon: "la:map-marker",
-    contact: "ул. Степана Разина, д.20",
+    contact: "ул. Степана Разина, д. 20",
     title: "Калининград"
   },
   {
     icon: "la:map-marker",
-    contact: "площадь Журавлёва, д.10",
+    contact: "площадь Журавлёва, д. 10",
     title: "Москва"
   },
   {
@@ -53,13 +53,15 @@ const contactMethods = [
     icon: "la:telegram",
     contact: "https://t.me/abb_psy",
     title: "Телеграм",
-    href: "https://t.me/abb_psy"
+    href: "https://t.me/abb_psy",
+    target: true
   },
   {
     icon: "la:vk",
     contact: "https://vk.com/abb_psy",
     title: "ВКонтакте",
-    href: "https://vk.com/abb_psy"
+    href: "https://vk.com/abb_psy",
+    target: true
   },
 ];
 
