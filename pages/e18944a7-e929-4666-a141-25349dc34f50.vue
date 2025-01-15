@@ -12,7 +12,7 @@
           <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
           <div class="mt-3 flex items-center gap-x-3">
             <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-            <p>{{ item.contact }}</p>
+            <a :href="item.href">{{ item.contact }}</a>
           </div>
         </li>
       </ul>
@@ -40,22 +40,26 @@ const contactMethods = [
   {
     icon: "la:phone",
     contact: "+7 (906) 792-1244",
-    title: "Телефон"
+    title: "Телефон",
+    href: "tel:+79067921244"
   },
   {
     icon: "la:envelope",
     contact: "briusova@gmail.com",
-    title: "E-mail"
+    title: "E-mail",
+    href: "mailto:briusova@gmail.com"
   },
   {
     icon: "la:telegram",
     contact: "https://t.me/abb_psy",
-    title: "Телеграм"
+    title: "Телеграм",
+    href: "https://t.me/abb_psy"
   },
   {
     icon: "la:vk",
-    contact: "@sasha_bruwes",
-    title: "ВКонтакте"
+    contact: "https://vk.com/abb_psy",
+    title: "ВКонтакте",
+    href: "https://vk.com/abb_psy"
   },
 ];
 

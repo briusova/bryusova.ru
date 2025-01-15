@@ -1,10 +1,10 @@
 <template>
-<section class="py-14 not-prose" un-cloak>
+<section class="py-14 not-prose">
     <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div class="max-w-xl space-y-3">
             <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
             <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-            <p>{{ the.description }}</p>
+            <p>{{ the.description }} Написать отзыв можно здесь: <a href="https://vk.com/topic-219123587_49317175" target="_blank" rel="noopener noreferrer" text-cyan-600="" hover:text-blue-600="">https://vk.com/topic-219123587_49317175</a> или пришлите отзыв с пометкой "<b>анонимно</b>" на <a href="mailto:briusova@gmail.com" text-cyan-600="" hover:text-blue-600="">briusova@gmail.com</a></p>
         </div>
         <div class="mt-12 px-4 rounded-md border-l-4 border-red-500 bg-red-50 md:max-w-2xl">
             <div class="flex justify-between py-3">
@@ -25,7 +25,7 @@
                 <li v-for="(item, idx) in testimonials" :key="idx" class="bg-gray-100 p-4 rounded-xl">
                     <figure>
                         <div class="flex items-center gap-x-4">
-                            <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async" />
+                            <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async">
                             <div>
                                 <span class="block text-gray-800 font-semibold">{{ item.name }}</span>
                             </div>
@@ -39,10 +39,8 @@
                 </li>
             </ul>
         </div>
-        <details
-            class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg">
-            <summary
-                class="text-xl leading-6 text-slate-600 dark:text-white font-semibold select-none hover:cursor-pointer">
+        <details class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg">
+            <summary class="text-xl leading-6 text-slate-600 dark:text-white font-semibold select-none hover:cursor-pointer">
                 Посмотреть все отзывы
             </summary>
             <div class="my-12">
@@ -50,7 +48,7 @@
                     <li v-for="(item, idx) in testimonials2" :key="idx" class="bg-gray-100 p-4 rounded-xl">
                         <figure>
                             <div class="flex items-center gap-x-4">
-                                <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async" loading="lazy" />
+                                <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async" loading="lazy">
                                 <div>
                                     <span class="block text-gray-800 font-semibold">{{ item.name }}</span>
                                 </div>
@@ -68,6 +66,8 @@
     </div>
 </section>
 </template>
+
+
 
 <script setup>
 import { ref, inject } from "vue";
@@ -180,5 +180,3 @@ const testimonials2 = [
 
 
 </script>
-
-

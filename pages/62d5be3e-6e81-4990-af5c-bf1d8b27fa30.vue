@@ -4,13 +4,16 @@
             <div class="max-w-xl space-y-3 not-prose mb-6">
                 <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
                 <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-                <p>{{ the.description }}</p>
+                <p>{{ the.description }} Все статьи я дублирую на сайте психологов №1 <a
+                        href="https://www.b17.ru/briusova" target="_blank" rel="noopener noreferrer" text-cyan-600=""
+                        hover:text-blue-600="">https://www.b17.ru/briusova</a></p>
             </div>
-            
 
-<ul class="not-prose list-disc list-inside">
-    <li v-for="{header, to} in the.$children"><el-button tag="router-link" link :to="to">{{header}}</el-button></li>
-</ul>
+
+            <ul class="not-prose list-disc list-inside">
+                <li v-for="{ header, to } in the.$children"><el-button tag="router-link" link
+                        :to="to">{{ header }}</el-button></li>
+            </ul>
 
 
         </div>
