@@ -1,5 +1,5 @@
 <template>
-  <section class="py-28 not-prose overflow-hidden" un-cloak>
+  <section class="py-16 not-prose overflow-hidden" un-cloak>
     <div class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8">
       <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl relative">
         <h1 class="text-sm text-indigo-600 font-medium">индивидуальный подход к самопознанию</h1>

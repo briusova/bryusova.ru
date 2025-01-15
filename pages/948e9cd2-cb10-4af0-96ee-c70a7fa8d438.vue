@@ -1,6 +1,6 @@
 <template>
   <div class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>
-    <div class="mt-8 items-center justify-between sm:flex">
+    <div class="mt-4 items-center justify-between sm:flex">
       <div class="mt-4 sm:mt-0">
 
          <div class="mt-3 flex items-center gap-x-3">
@@ -50,7 +50,7 @@
   <div class="min-h-dvh"><router-view></router-view></div>
   <footer class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>
     <div class="max-w-7xl sm:mx-auto sm:text-center">
-      <img :src="the.images[1].url" class="w-24 sm:mx-auto" decoding="async" />
+      <img :src="the.images[1].url" class="w-20 sm:mx-auto" decoding="async" />
       <p class="leading-relaxed mt-2 text-[15px]">
         Копирование материала возможно только с согласия администрации сайта. Использование любой медицинской информации
         в
