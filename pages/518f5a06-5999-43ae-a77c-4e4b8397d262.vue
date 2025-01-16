@@ -134,7 +134,7 @@
     <h2 style="text-align: justify;">Адреса и реквизиты сторон</h2>
     <p style="text-align: justify;">9.1. Самозанятая Брюсова А.Б.</p>
     <p style="text-align: justify;">Тел.: +7 (906) 792-12-44</p>
-    <p style="text-align: justify;">E-mail: abb44@mail.ru</p>
+    <p style="text-align: justify;">E-mail: briusova@gmail.com</p>
     <p style="text-align: justify;">ИНН: 771709237196</p>
 </div>
 </template>
