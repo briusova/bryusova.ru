@@ -8,7 +8,7 @@
                         href="https://www.b17.ru/briusova" target="_blank" rel="noopener noreferrer" text-cyan-600=""
                         hover:text-blue-600="">https://www.b17.ru/briusova</a>, а также в моём <a
                         href="https://t.me/abb_psy" target="_blank" rel="noopener noreferrer" text-cyan-600=""
-                        hover:text-blue-600="">Телеграм-канале</a>, , где я делюсь актуальными материалами и советами.</p>
+                        hover:text-blue-600="">Телеграм-канале</a>, где я делюсь актуальными материалами и советами.</p>
             </div>
 
 
