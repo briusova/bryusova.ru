@@ -11,12 +11,6 @@
                         hover:text-blue-600="">Телеграм-канале</a>, где я делюсь актуальными материалами и советами.</p>
             </div>
 
-
-
-
-
-
-
             <ul class="divide-y divide-slate-100 not-prose">
                 <li v-for="{ header, to, description, images } in the.$children">
                     <RouterLink :to="to" class="flex items-start gap-4 px-4 py-3">

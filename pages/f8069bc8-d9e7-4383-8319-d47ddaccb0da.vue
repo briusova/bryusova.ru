@@ -1,53 +1,35 @@
 <template>
-<section class="py-14 not-prose">
-    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-        <div class="max-w-xl space-y-3">
-            <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
-            <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-            <p>{{ the.description }} Написать отзыв можно здесь: <a href="https://vk.com/topic-219123587_49317175" target="_blank" rel="noopener noreferrer" text-cyan-600="" hover:text-blue-600="">https://vk.com/topic-219123587_49317175</a> или пришлите отзыв с пометкой "<b>анонимно</b>" на <a href="mailto:briusova@gmail.com" text-cyan-600="" hover:text-blue-600="">briusova@gmail.com</a></p>
-        </div>
-        <div class="mt-12 px-4 rounded-md border-l-4 border-red-500 bg-red-50 md:max-w-2xl">
-            <div class="flex justify-between py-3">
-                <div class="flex">
-                    <div>
-                        <icon icon="mdi:alert" class="size-6 text-red-500"></icon>
-                    </div>
-                    <div class="self-center ml-3">
-                        <span class="text-red-600 font-semibold">Внимание!</span>
-                        <p class="text-red-600 mt-1">Согласно профессиональной этике, все имена, фамилии и данные клиентов, пожелавших сохранить анонимность, изменены на случайные.</p>
+    <section class="py-14 not-prose">
+        <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+            <div class="max-w-xl space-y-3">
+                <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
+                <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
+                <p>{{ the.description }} Написать отзыв можно здесь: <a href="https://vk.com/topic-219123587_49317175"
+                        target="_blank" rel="noopener noreferrer" text-cyan-600=""
+                        hover:text-blue-600="">https://vk.com/topic-219123587_49317175</a> или пришлите отзыв с пометкой
+                    "<b>анонимно</b>" на <a href="mailto:briusova@gmail.com" text-cyan-600=""
+                        hover:text-blue-600="">briusova@gmail.com</a></p>
+            </div>
+            <div class="mt-12 px-4 rounded-md border-l-4 border-red-500 bg-red-50 md:max-w-2xl">
+                <div class="flex justify-between py-3">
+                    <div class="flex">
+                        <div>
+                            <icon icon="mdi:alert" class="size-6 text-red-500"></icon>
+                        </div>
+                        <div class="self-center ml-3">
+                            <span class="text-red-600 font-semibold">Внимание!</span>
+                            <p class="text-red-600 mt-1">Согласно профессиональной этике, все имена, фамилии и данные
+                                клиентов, пожелавших сохранить анонимность, изменены на случайные.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="my-12">
-            <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <li v-for="(item, idx) in testimonials" :key="idx" class="bg-gray-100 p-4 rounded-xl">
-                    <figure>
-                        <div class="flex items-center gap-x-4">
-                            <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async">
-                            <div>
-                                <span class="block text-gray-800 font-semibold">{{ item.name }}</span>
-                            </div>
-                        </div>
-                        <blockquote>
-                            <p class="mt-6 text-gray-700">
-                                {{ item.quote }}
-                            </p>
-                        </blockquote>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-        <details class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg">
-            <summary class="text-xl leading-6 text-slate-600 dark:text-white font-semibold select-none hover:cursor-pointer">
-                Посмотреть все отзывы
-            </summary>
             <div class="my-12">
                 <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <li v-for="(item, idx) in testimonials2" :key="idx" class="bg-gray-100 p-4 rounded-xl">
+                    <li v-for="(item, idx) in testimonials" :key="idx" class="bg-gray-100 p-4 rounded-xl">
                         <figure>
                             <div class="flex items-center gap-x-4">
-                                <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async" loading="lazy">
+                                <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async">
                                 <div>
                                     <span class="block text-gray-800 font-semibold">{{ item.name }}</span>
                                 </div>
@@ -61,9 +43,34 @@
                     </li>
                 </ul>
             </div>
-        </details>
-    </div>
-</section>
+            <details
+                class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg">
+                <summary
+                    class="text-xl leading-6 text-slate-600 dark:text-white font-semibold select-none hover:cursor-pointer">
+                    Посмотреть все отзывы
+                </summary>
+                <div class="my-12">
+                    <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <li v-for="(item, idx) in testimonials2" :key="idx" class="bg-gray-100 p-4 rounded-xl">
+                            <figure>
+                                <div class="flex items-center gap-x-4">
+                                    <img :src="item.src" class="w-16 h-16 rounded-full" decoding="async" loading="lazy">
+                                    <div>
+                                        <span class="block text-gray-800 font-semibold">{{ item.name }}</span>
+                                    </div>
+                                </div>
+                                <blockquote>
+                                    <p class="mt-6 text-gray-700">
+                                        {{ item.quote }}
+                                    </p>
+                                </blockquote>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </section>
 </template>
 
 
@@ -93,6 +100,12 @@ const testimonials = [
         gender: "women",
         quote: 'Огромное спасибо за нумерологисеский разбор жизненных циклов, он был очень вовремя и многое прояснил по моему запросу. У меня появилось спокойствие, план действий и энергия принятия.'
     },
+
+{
+        gender: "men",
+        quote: 'Записался на консультацию с МАК к Александре. Много слышал об этих картах, но не было случая познакомиться с этим инструментом поближе. Поражён результатами! Две сложнейшие ситуации Александра разобрала "по косточкам". Было очень интересно, но главное - результативно. Александра очень помогла, спасибо!'
+    },
+
     {
         gender: "women",
         quote: 'Для меня было очень удивительно, что в каждой карте я видела себя и свои ситуации откуда-то приходили слова для описания. Через некоторое время я думаю что мне необходимо повторить сеанс, я обязательно вернусь чтобы посмотреть как изменилась я и моё сознание. Моя благодарность за новые открытия, за ваш профессионализм, Александра!'
@@ -105,10 +118,7 @@ const testimonials = [
         gender: "women",
         quote: 'Благодарю Вас, Александра, за такую колосальную работу, которую Вы сделали со мной! Спасибо за методики, которые Вы мне дали для моей дальнейшей жизни, постараюсь все внедрить. И обязательно возьмусь прочитать рекомендованую литературу, очень интересно!!!'
     },
-    {
-        gender: "women",
-        quote: 'Хочу выразить огромную благодарность Александре за консультацию! Я получила ценные советы и рекомендации, которые помогут мне справиться с моими проблемами. Александра поделилась со мной интересными техниками, рассказала и показала, как их применять. Атмосфера на консультации была очень дружелюбной и располагающей к открытому диалогу. Я обязательно буду рекомендовать Александру своим друзьям и знакомым.'
-    },
+
 ]
     .map(({ gender, quote }) => [
         quote,
@@ -169,6 +179,10 @@ const testimonials2 = [
     {
         gender: "women",
         quote: 'Выражаю большую благодарность! Техники, с которыми меня познакомила Александра улучшили моё состояние! Они действительно помогают здесь и сейчас и имеют накопительный эффект. Благодарю за эффективную работу и тёплые встречи!'
+    },
+        {
+        gender: "women",
+        quote: 'Хочу выразить огромную благодарность Александре за консультацию! Я получила ценные советы и рекомендации, которые помогут мне справиться с моими проблемами. Александра поделилась со мной интересными техниками, рассказала и показала, как их применять. Атмосфера на консультации была очень дружелюбной и располагающей к открытому диалогу. Я обязательно буду рекомендовать Александру своим друзьям и знакомым.'
     }
 ]
     .map(({ gender, quote }) => [
