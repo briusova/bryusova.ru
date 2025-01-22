@@ -23,6 +23,7 @@
                                 <p class="text-gray-400 text-sm mt-1">{{ description }}</p>
                             </div>
                         </router-link>
+                   <el-button :to="to" class="ma-4">подробнее<el-icon class="el-icon--right"><Right /></el-icon></el-button>     
                     </article>
                 </div>
             </section>
@@ -36,6 +37,7 @@
 <script setup>
 import { ElImage } from "element-plus";
 import { inject } from "vue";
+import { Right } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];

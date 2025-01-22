@@ -3,11 +3,11 @@
     <div class="mt-4 items-center justify-between sm:flex">
       <div class="mt-4 sm:mt-0">
 
-         <div class="mt-3 flex items-center gap-x-3">
-            <icon class="text-gray-400 size-7" icon="la:map-marker"></icon>
-            <div>Калининград, ул. Степана Разина, д. 20</div>
-          </div>
-         
+        <div class="mt-3 flex items-center gap-x-3">
+          <icon class="text-gray-400 size-7" icon="la:map-marker"></icon>
+          <div>Калининград, ул. Степана Разина, д. 20</div>
+        </div>
+
       </div>
       <div class="mt-6 sm:mt-0">
         <ul class="flex items-center space-x-4">
