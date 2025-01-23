@@ -25,10 +25,16 @@
             <p><b>Время на прохождение теста</b> – 1
                 час</p>
             <p></p>
-            <p><a href="https://career.prof-dialog.ru/test-total#pricing" target="_blank" rel="noopener noreferrer"
-                    text-cyan-600="" hover:text-blue-600="">ПРИОБРЕСТИ ТЕСТ</a></p>
-            <p><a href="https://prof-dialog.app/results-tphcd/1674025022846x113712781781893120" target="_blank"
-                    rel="noopener noreferrer" text-cyan-600="" hover:text-blue-600="">ПОСМОТРЕТЬ ОБРАЗЕЦ ОТЧЁТА</a></p>
+            <p><el-button class="not-prose" type="danger" :icon="Right"><a
+                        href="https://career.prof-dialog.ru/test-total#pricing" target="_blank"
+                        rel="noopener noreferrer">ПРИОБРЕСТИ ТЕСТ</a></el-button></p>
+
+            <p><el-button class="not-prose" type="info" :icon="Right"><a
+                        href="https://prof-dialog.app/results-tphcd/1674025022846x113712781781893120" target="_blank"
+                        rel="noopener noreferrer">ПОСМОТРЕТЬ ОБРАЗЕЦ ОТЧЁТА</a></el-button></p>
+
+
+            
             <p><span style="color: rgb(75 85 99 / var(--un-text-opacity));">Результаты Вашего теста станут хорошим
                     подспорьем на консультации у
                     психолога. Психологический тест сродни анализу крови, который терапевты назначают при обращении.
@@ -83,11 +89,12 @@
                     психологические особенности, роль в команде, стиль лидерства, стрессоустойчивость и многое
                     другое!</span></p>
             <p></p>
-     
 
-            <p><el-button class="not-prose" type="danger" :icon="Right"><a href="https://career.prof-dialog.ru/test-total#pricing" target="_blank"
+
+            <p><el-button class="not-prose" type="danger" :icon="Right"><a
+                        href="https://career.prof-dialog.ru/test-total#pricing" target="_blank"
                         rel="noopener noreferrer">ПРИОБРЕСТИ ТЕСТ</a></el-button></p>
-<p><b>Скидка на тестирование 7% по промокоду&nbsp;</b><span
+            <p><b>Скидка на тестирование 7% по промокоду&nbsp;</b><span
                     style="color: rgb(75 85 99 / var(--un-text-opacity));">–</span><b
                     style="color: rgb(75 85 99 / var(--un-text-opacity));">&nbsp;KOMPLEMED</b></p>
 
