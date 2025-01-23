@@ -22,8 +22,9 @@
                                 </h3>
                                 <p class="text-gray-400 text-sm mt-1">{{ description }}</p>
                             </div>
+                            <el-button :to="to" class="ma-4">подробнее<el-icon class="el-icon--right"><Right /></el-icon></el-button>
                         </router-link>
-                   <el-button :to="to" class="ma-4">подробнее<el-icon class="el-icon--right"><Right /></el-icon></el-button>     
+                        
                     </article>
                 </div>
             </section>
