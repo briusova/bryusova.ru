@@ -1,17 +1,28 @@
 <template>
-  <section class="py-14 not-prose" un-cloak>
+  <section class="py-14 not-prose">
     <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
       <div class="max-w-xl space-y-3">
         <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
         <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-        <p>{{ the.description }}</p>
+        <p>{{ the.description }}<br><b>Образование</b>:</p>
+        <p>🔹Московский Государственный Социальный Университет / психолог, преподаватель психологических
+          дисциплин<br>🔹Президентская академия РАНХиГС / аспирантура, кафедра акмеологии</p>
+        <p><b>Повышение квалификации</b>:</p>
+        <p><span style="color: rgb(75 85 99 / var(--un-text-opacity));">🔸</span>Общероссийская профессиональная
+          психотерапевтическая лига / ресурс-ориентированная психотерапия<br>🔸АНО
+          "Профессиональный стандарт" /психология со специализацией "Нумерология"<br>🔸Институт глобального
+          образования и развития / психологическое консультирование<br>🔸Экспертно-аналитическое объединение
+          "Проф-диалог" / психодиагностика личностно-профессиональных компетенций<br>🔸Школа саморегуляции Наталии
+          Носачевой
+          / система самодиагностики и самоисцеления человека</p>
       </div>
       <div class="my-12">
         <ul class="grid gap-8 lg:grid-cols-2">
           <li class="gap-8 sm:flex" v-for="(item, index) in maincert" :key="index">
             <div class="w-full h-60">
               <el-image :src="item.src" class="w-full h-full shadow-md rounded-xl border-2 border-sky-200"
-                :alt="item.name" decoding="async" fit="cover" :previewSrcList="previewSrcList" :initial-index="index" />
+                :alt="item.name" decoding="async" fit="cover" :preview-src-list="previewSrcList" :initial-index="index">
+              </el-image>
             </div>
             <div class="w-full  mt-4 sm:mt-0">
               <h4 class="text-lg text-gray-700 font-semibold">{{ item.name }}</h4>
@@ -32,8 +43,9 @@
             <li class="gap-8 sm:flex" v-for="(item, index) in cert" :key="index">
               <div class="w-full h-60">
                 <el-image :src="item.src" class="w-full h-full shadow-md rounded-xl border-2 border-sky-200"
-                  :alt="item.name" decoding="async" loading="lazy" fit="cover" :previewSrcList="previewSrcList1"
-                  :initial-index="index" />
+                  :alt="item.name" decoding="async" loading="lazy" fit="cover" :preview-src-list="previewSrcList1"
+                  :initial-index="index">
+                </el-image>
               </div>
               <div class="w-full  mt-4 sm:mt-0">
                 <h4 class="text-lg text-gray-700 font-semibold">{{ item.name }}</h4>
@@ -49,8 +61,9 @@
             <li v-for="(item, index) in hcert" :key="index">
               <div class="w-full h-60 sm:h-52 md:h-56">
                 <el-image :src="item.src" class="w-full h-full shadow-md rounded-xl border-2 border-sky-200"
-                  :alt="item.name" decoding="async" loading="lazy" fit="cover" :previewSrcList="previewSrcList2"
-                  :initial-index="index" />
+                  :alt="item.name" decoding="async" loading="lazy" fit="cover" :preview-src-list="previewSrcList2"
+                  :initial-index="index">
+                </el-image>
               </div>
               <div class="mt-4">
                 <h4 class="text-lg text-gray-700 font-semibold">{{ item.name }}</h4>
@@ -64,6 +77,8 @@
     </div>
   </section>
 </template>
+
+
 
 <script setup>
 import { inject } from "vue";
@@ -82,7 +97,11 @@ const maincert = [{
   date: "с 2023 года",
   desc: "Национальная профессиональная ассоциация специалистов народной медицины и оздоровительных практик",
   src: "my_images/2025nanm.jpg"
-},
+}
+];
+const previewSrcList = maincert.map(({ src, src2 }) => src2 ?? src);
+
+const cert = [
 {
   name: "Ресурс-ориентированная психотерапия",
   date: "2024 год",
@@ -95,17 +114,14 @@ const maincert = [{
   date: "2023 год",
   desc: "Система добровольной сертификации \"Консалтинг, аудит, экспертиза, оценка\"",
   src: "images/da3db03d-a698-48fa-9ab9-67882c338642.jpeg"
-}
-];
-const previewSrcList = maincert.map(({ src, src2 }) => src2 ?? src);
-const cert = [
+},
   {
     name: "Свидетельство",
     date: "2025 год",
     desc: "Общероссийская профессиональная психотерапевтическая лига",
     src: "my_images/opl.jpg"
   },
-    {
+  {
     name: "Психолог, нумеролог-консультант",
     date: "2023 год",
     desc: "АНО \"Профессиональный стандарт\"",
