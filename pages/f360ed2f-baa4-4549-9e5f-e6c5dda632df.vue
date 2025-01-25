@@ -87,6 +87,10 @@
             <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{
                 the.parent.header }}</el-button>
 
+
+            <p><el-button class="not-prose" type="primary":icon="Back" tag="a" href="/услуги/консультации/">Консультации</el-button></p>
+
+
         </div>
     </section>
 </template>
