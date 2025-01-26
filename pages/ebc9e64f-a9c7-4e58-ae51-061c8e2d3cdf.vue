@@ -4,7 +4,7 @@
             <h1>{{ the.header }}</h1>
 
             <p>Со временем я поняла, что делиться знаниями и опытом — это то, что делает меня по-настоящему
-                счастливой. Преподавание позволяет мне помочь большему количеству людей разобраться в своих трудностях и
+                счастливой. Преподавание позволяет мне помочь большему количеству людей разобраться в своих проблемах и
                 найти новые возможности для роста.</p>
             <p>Я верю, что каждый способен изменить свою жизнь к лучшему, и, когда вижу, как мои слушатели начинают
                 расти и развиваться, это наполняет меня радостью и вдохновением.</p>
@@ -19,7 +19,7 @@
                 <el-table-column label="Наименование услуги">
                     <template #default="scope">
                         <router-link :to="scope.row.link" v-if="scope.row.link">{{ scope.row.name }}</router-link>
-                        <div v-else>{{ scope.row.name }}</div>
+                        <div v-else="">{{ scope.row.name }}</div>
                     </template>
                 </el-table-column>
                 <el-table-column prop="price" label="Стоимость">
@@ -29,12 +29,9 @@
             <div class="grid gap-y-1">
                 <div><el-button class="not-prose w-full !justify-start" tag="a" href="tel:+79067921244">Позвонить +7
                         (906) 792-12-44 </el-button></div>
-                <div><el-button class="not-prose w-full !justify-start" tag="a"
-                        href="https://wa.me/79067921244?text=Здравствуйте,%20хочу%20записаться%20на%20прием!"
-                        target="_blank" rel="noopener noreferrer"> Написать в WhatsApp
+                <div><el-button class="not-prose w-full !justify-start" tag="a" href="https://wa.me/79067921244?text=Здравствуйте,%20хочу%20записаться%20на%20прием!" target="_blank" rel="noopener noreferrer"> Написать в WhatsApp
                     </el-button></div>
-                <div><el-button class=" not-prose w-full !justify-start" tag="a" target="_blank"
-                        rel="noopener noreferrer" href="https://t.me/Sasha_Bryusova">Написать в
+                <div><el-button class=" not-prose w-full !justify-start" tag="a" target="_blank" rel="noopener noreferrer" href="https://t.me/Sasha_Bryusova">Написать в
                         Telegram</el-button></div>
             </div>
 
@@ -42,8 +39,7 @@
             <p><br></p>
             <p>Также, я являюсь тренером-наставником в "Школе саморегуляции по методике Наталии Носачевой".</p>
 
-            <p><el-button class="not-prose" type="danger" tag="a" href="https://natalie-school.ru" target="_blank"
-                    rel="noopener noreferrer">Школа саморегуляции<el-icon class="el-icon--right">
+            <p><el-button class="not-prose" type="danger" tag="a" href="https://natalie-school.ru" target="_blank" rel="noopener noreferrer">Школа саморегуляции<el-icon class="el-icon--right">
                         <right>
                         </right>
                     </el-icon></el-button></p>
