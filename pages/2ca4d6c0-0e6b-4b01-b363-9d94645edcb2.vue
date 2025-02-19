@@ -1,5 +1,5 @@
 <template>
-<div class="container px-4 mx-auto my-12">
+<div class="max-w-screen-xl px-4 mx-auto my-12">
     <h1>{{ the.title }}</h1>
     <h2 style="text-align: justify;">1. Общие положения</h2>
     <p style="text-align: justify;">1.1. Самозанятая Брюсова Александра Борисовна (ИНН 771709237196), (далее -
