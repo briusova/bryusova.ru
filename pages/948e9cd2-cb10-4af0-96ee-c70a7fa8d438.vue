@@ -2,12 +2,10 @@
   <div class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>
     <div class="mt-4 items-center justify-between sm:flex">
       <div class="mt-4 sm:mt-0">
-
         <div class="mt-3 flex items-center gap-x-3">
           <icon class="text-gray-400 size-7" icon="la:map-marker"></icon>
           <div>Калининград, ул. Степана Разина, д. 20</div>
         </div>
-
       </div>
       <div class="mt-6 sm:mt-0">
         <ul class="flex items-center space-x-4">
@@ -21,31 +19,31 @@
       </div>
     </div>
   </div>
-  <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6" un-cloak>
+  <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 lg:flex lg:space-x-6" un-cloak>
     <div class="flex justify-between">
       <router-link to="/">
         <img :src="the.images[1].url" width="100" height="50" decoding="async" />
       </router-link>
-      <button class="text-gray-500 outline-none md:hidden h-6 bg-white" @click="toggleMenu">
+      <button class="text-gray-500 outline-none lg:hidden h-6 bg-white" @click="toggleMenu">
         <icon icon="mdi:close" class="h-6 w-6" v-if="isOpen"></icon>
         <icon icon="mdi:menu" class="h-6 w-6" v-else></icon>
       </button>
     </div>
-    <ul :class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-white md:border-none md:static' : 'hidden'"
-      class="flex-1 justify-between mt-12 md:text-sm md:font-medium md:flex md:mt-0">
-      <div class="items-center space-y-5 md:flex md:space-x-6 md:space-y-0 md:ml-12">
+    <div :class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-white lg:border-none lg:static' : 'hidden'"
+      class="flex-1 justify-between mt-12 lg:text-sm lg:font-medium lg:flex lg:mt-0">
+      <ul class="items-center space-y-5 lg:flex lg:space-x-6 lg:space-y-0 lg:ml-12">
         <li class="text-gray-500 hover:text-indigo-600" v-for="(item, idx) in the.$children.slice(1).slice(0, -1)"
           :key="idx">
           <router-link :to="item.to" v-text="item.name"></router-link>
         </li>
-      </div>
-      <li class="order-2 py-5 md:py-0">
-        <router-link :to="the.children[1].to"
-          class="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block md:py-3 md:inline">
-          Приступим
-        </router-link>
-      </li>
-    </ul>
+        <li class="order-2 py-5 lg:py-0">
+          <router-link :to="the.children[1].to"
+            class="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block lg:py-3 lg:inline">
+            Приступим
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </nav>
   <div class="min-h-dvh"><router-view></router-view></div>
   <footer class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>

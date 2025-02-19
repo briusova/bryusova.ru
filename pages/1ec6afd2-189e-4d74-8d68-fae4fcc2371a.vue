@@ -1,6 +1,6 @@
 <template>
   <section class="py-14 not-prose overflow-hidden" un-cloak>
-    <div class="px-4 md:px-8">
+    <div class="max-w-screen-xl mx-auto md:px-8">
       <p class="text-center text-sm text-gray-700 font-semibold">{{ the.title }}</p>
       <p class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose text-center">Жизнь невероятно щедра
         ко
