@@ -1,30 +1,32 @@
 <template>
-  <section class="py-16 not-prose overflow-hidden" un-cloak>
+  <section class="py-16 not-prose overflow-hidden">
     <div class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8">
       <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl relative">
         <h1 class="text-sm text-indigo-600 font-medium">индивидуальный подход к самопознанию</h1>
         <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">{{ the.title }}</h2>
-        <p>{{ the.description }}</p>
+        <p><b>Постоянная тревога — как фоновая музыка, которая заглушает вашу жизнь.</b><br>Вы устали от мыслей «а что, если…», превращающих каждый день в полосу препятствий, от напряжения в теле и конфликтов «на пустом месте»? Вы замечаете, как беспокойство крадёт вашу радость и мешает сделать даже маленький шаг вперёд?&nbsp;</p><p><b>Моя работа — не «исправить» вас, а помочь</b>:<br>→ найти источники напряжения, о которых вы даже не подозревали
+<br>→ научиться “перезаряжать” психику простыми практиками
+<br>→ вспомнить свою силу и создать запас прочности, чтобы сложные ситуации не выбивали из колеи</p><p><b>Гармония — это не отсутствие проблем, а умение проходить через них, не теряя себя</b>.</p>
         <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-          <router-link :to="the.$next.to"
-            class="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
+          <router-link :to="the.$next.to" class="block py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg hover:shadow-none">
             Давайте начнём
           </router-link>
-          <router-link to="/приём/"
-            class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">Записаться
+          <router-link to="/приём/" class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">Записаться
             <icon icon="mdi:arrow-right"></icon>
           </router-link>
         </div>
-        <div class="v-bg position-absolute -inset-x-48 -inset-y-96">
-          <div aria-hidden="true" class="opacity-20 size-full" />
+        <div class="v-bg position-absolute -inset-x-48 -inset-y-96 -z-10">
+          <div aria-hidden="true" class="opacity-20 size-full"></div>
         </div>
       </div>
       <div class="flex-none mt-14 md:mt-0 md:max-w-xl">
-        <img :src="the.images[1].url" class=" md:rounded-tl-[108px]" alt="" decoding="async" />
+        <img :src="the.images[1].url" class=" md:rounded-tl-[108px]" alt="" decoding="async">
       </div>
     </div>
   </section>
 </template>
+
+
 
 <script setup>
 import { inject } from "vue";
@@ -32,6 +34,8 @@ const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
 </script>
+
+
 
 <style scoped>
 .v-bg {
