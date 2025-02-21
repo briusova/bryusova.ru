@@ -1,5 +1,5 @@
 <template>
-    <form id="contactForm" action="https://yourcloudflare.workers.dev/" method="POST">
+    <form id="contactForm" action="https://bryusova.vues3.workers.dev/" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <br>
