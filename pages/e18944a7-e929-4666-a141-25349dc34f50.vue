@@ -8,8 +8,8 @@
       <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ title }}</p>
       <p>{{ description }}</p>
     </div>
-    <div class="mt-24 grid grid-cols-4 gap-12 md:grid-cols-8 lg:grid-cols-12">
-      <el-form :model="form" label-width="auto" ref="formRef" class="col-span-4 lg:col-span-6" label-position="top">
+    
+      <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
         <el-form-item label="Ваше имя" prop="name" :rules="[
           {
             required: true,
@@ -50,7 +50,7 @@
           <el-button @click="resetForm(formRef)">Очистить форму</el-button>
         </el-form-item>
       </el-form>
-      <ul class="flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24 col-span-4 lg:col-span-6">
+      <ul class="flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
         <li v-for="(item, idx) in contactMethods" :key="idx">
           <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
           <div class="mt-3 flex items-center gap-x-3">
@@ -60,7 +60,7 @@
         </li>
       </ul>
     </div>
-  </div>
+
 </template>
 
 <script setup>
