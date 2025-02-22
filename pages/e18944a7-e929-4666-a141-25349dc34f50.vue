@@ -8,58 +8,58 @@
       <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ title }}</p>
       <p>{{ description }}</p>
     </div>
-    
-      <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
-        <el-form-item label="Ваше имя" prop="name" :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите своё имя',
-            trigger: 'blur',
-          },
-        ]">
-          <el-input v-model="form.name" />
-        </el-form-item>
-        <el-form-item label="Ваш телефон" prop="phone">
-          <el-input v-model="form.phone" />
-        </el-form-item>
-        <el-form-item label="Ваш емейл" prop="email" :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите адрес электронной почты',
-            trigger: 'blur',
-          },
-          {
-            type: 'email',
-            message: 'Пожалуйста, введите корректный адрес электронной почты',
-            trigger: ['blur', 'change'],
-          },
-        ]">
-          <el-input v-model="form.email" />
-        </el-form-item>
-        <el-form-item label="Сообщение" prop="desc" :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите своё сообщение',
-            trigger: 'blur',
-          },
-        ]">
-          <el-input v-model="form.desc" type="textarea" />
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="submitForm(formRef)">Отправить заявку</el-button>
-          <el-button @click="resetForm(formRef)">Очистить форму</el-button>
-        </el-form-item>
-      </el-form>
-      <ul class="flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
-        <li v-for="(item, idx) in contactMethods" :key="idx">
-          <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
-          <div class="mt-3 flex items-center gap-x-3">
-            <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-            <a :target="item.target && '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+
+    <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
+      <el-form-item label="Ваше имя" prop="name" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите своё имя',
+          trigger: 'blur',
+        },
+      ]">
+        <el-input v-model="form.name" />
+      </el-form-item>
+      <el-form-item label="Ваш телефон" prop="phone">
+        <el-input v-model="form.phone" />
+      </el-form-item>
+      <el-form-item label="Ваш емейл" prop="email" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите адрес электронной почты',
+          trigger: 'blur',
+        },
+        {
+          type: 'email',
+          message: 'Пожалуйста, введите корректный адрес электронной почты',
+          trigger: ['blur', 'change'],
+        },
+      ]">
+        <el-input v-model="form.email" />
+      </el-form-item>
+      <el-form-item label="Сообщение" prop="desc" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите своё сообщение',
+          trigger: 'blur',
+        },
+      ]">
+        <el-input v-model="form.desc" type="textarea" />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="submitForm(formRef)">Отправить заявку</el-button>
+        <el-button @click="resetForm(formRef)">Очистить форму</el-button>
+      </el-form-item>
+    </el-form>
+    <ul class="flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
+      <li v-for="(item, idx) in contactMethods" :key="idx">
+        <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
+        <div class="mt-3 flex items-center gap-x-3">
+          <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
+          <a :target="item.target && '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 
 </template>
 
@@ -81,7 +81,6 @@ const { id } = defineProps(["id"]),
     email: "",
     desc: '',
   }),
-  message = "Заявка отправлена",
   contactMethods = [
     {
       icon: "la:map-marker",
@@ -132,20 +131,15 @@ function submitForm(formEl) {
         body = JSON.stringify({ ...form, pageUrl, pageTitle });
       try {
         ElMessage("Отправка запроса...");
-        const response = await fetch("https://bryusova.vues3.workers.dev", { method, headers, body });
-        if (response.ok) {
-          await response.json();
-          ElMessage.closeAll();
-          ElMessage.success(message);
-          formEl?.resetFields();
-        } else {
-          const { message } = await response.json();
-          ElMessage.closeAll();
-          ElMessage.error(`Ошибка: ${message}`);
-        }
-      } catch (e) {
+        const { ok, text } = await fetch("https://bryusova.vues3.workers.dev", { method, headers, body });
         ElMessage.closeAll();
-        ElMessage.error(`Ошибка: ${e.message}`);
+        if (ok) {
+          ElMessage.success(await text());
+          formEl?.resetFields();
+        } else ElMessage.error(`Ошибка: ${await text()}`);
+      } catch ({ message }) {
+        ElMessage.closeAll();
+        ElMessage.error(`Ошибка: ${message}`);
       }
     } else ElMessage.error("Пожалуйста, заполните форму");
   })
