@@ -131,12 +131,12 @@ function submitForm(formEl) {
         body = JSON.stringify({ ...form, pageUrl, pageTitle });
       try {
         ElMessage("Отправка запроса...");
-        const { ok, text } = await fetch("https://bryusova.vues3.workers.dev", { method, headers, body });
+        const response = await fetch("https://bryusova.vues3.workers.dev", { method, headers, body });
         ElMessage.closeAll();
-        if (ok) {
-          ElMessage.success(await text());
+        if (response.ok) {
+          ElMessage.success(await response.text());
           formEl?.resetFields();
-        } else ElMessage.error(`Ошибка: ${await text()}`);
+        } else ElMessage.error(`Ошибка: ${await response.text()}`);
       } catch ({ message }) {
         ElMessage.closeAll();
         ElMessage.error(`Ошибка: ${message}`);
