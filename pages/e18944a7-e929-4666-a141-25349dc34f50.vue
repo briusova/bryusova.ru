@@ -131,7 +131,7 @@ function submitForm(formEl) {
         body = JSON.stringify({ ...form, pageUrl, pageTitle });
       try {
         ElMessage("Отправка запроса...");
-        const response = await fetch("https://bryusova.vues3.workers.dev", { method, headers, body });
+        const response = await fetch("https://form.bryusova.ru", { method, headers, body });
         ElMessage.closeAll();
         if (response.ok) {
           ElMessage.success(await response.text());
