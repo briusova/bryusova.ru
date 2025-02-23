@@ -69,7 +69,7 @@ import { ElMessage } from "element-plus";
 
 
 const { id } = defineProps(["id"]),
-  { title: pageTitle, name, title, description } = inject("pages")[id],
+  { name, title, description } = inject("pages")[id],
   formRef = ref(),
   method = "POST",
   headers = {
@@ -127,8 +127,7 @@ function resetForm(formEl) {
 function submitForm(formEl) {
   formEl?.validate(async (valid) => {
     if (valid) {
-      const pageUrl = window.location.href,
-        body = JSON.stringify({ ...form, pageUrl, pageTitle });
+      const body = JSON.stringify(form);
       try {
         ElMessage("Отправка запроса...");
         const response = await fetch("https://form.bryusova.ru", { method, headers, body });
