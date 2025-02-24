@@ -64,6 +64,7 @@
 </template>
 
 <script setup>
+import { useThrottleFn } from "@vueuse/core";
 import { reactive, ref, inject } from "vue";
 import { ElMessage } from "element-plus";
 
@@ -118,29 +119,33 @@ const { id } = defineProps(["id"]),
       href: "https://vk.com/abb_psy",
       target: true
     },
-  ];
+  ], throttledFn = useThrottleFn(sendForm, 6000);
+
 
 function resetForm(formEl) {
   formEl?.resetFields();
 }
 
+async function sendForm() {
+  const body = JSON.stringify(form);
+  try {
+    ElMessage("Отправка запроса...");
+    const response = await fetch("https://form.bryusova.ru", { method, headers, body });
+    ElMessage.closeAll();
+    if (response.ok) {
+      ElMessage.success(await response.text());
+      formRef.value?.resetFields();
+    } else ElMessage.error(`Ошибка: ${await response.text()}`);
+  } catch ({ message }) {
+    ElMessage.closeAll();
+    ElMessage.error(`Ошибка: ${message}`);
+  }
+}
+
 function submitForm(formEl) {
-  formEl?.validate(async (valid) => {
-    if (valid) {
-      const body = JSON.stringify(form);
-      try {
-        ElMessage("Отправка запроса...");
-        const response = await fetch("https://form.bryusova.ru", { method, headers, body });
-        ElMessage.closeAll();
-        if (response.ok) {
-          ElMessage.success(await response.text());
-          formEl?.resetFields();
-        } else ElMessage.error(`Ошибка: ${await response.text()}`);
-      } catch ({ message }) {
-        ElMessage.closeAll();
-        ElMessage.error(`Ошибка: ${message}`);
-      }
-    } else ElMessage.error("Пожалуйста, заполните форму");
+  formEl?.validate((valid) => {
+    if (valid) throttledFn();
+    else ElMessage.error("Пожалуйста, заполните форму");
   })
 }
 </script>
