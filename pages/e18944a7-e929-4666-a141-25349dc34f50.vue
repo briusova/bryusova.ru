@@ -1,52 +1,79 @@
 <template>
   <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8" un-cloak>
     <div class="rounded-3xl overflow-hidden shadow-2xl mb-24">
-      <img src="my_images/veAOAZWU-Ys.jpg" alt="" decoding="async" class="h-auto min-w-2xl">
+      <img
+        src="my_images/veAOAZWU-Ys.jpg"
+        alt=""
+        decoding="async"
+        class="h-auto min-w-2xl"
+      />
     </div>
     <div class="max-w-xl space-y-3">
       <h3 class="text-indigo-600 font-semibold">{{ name }}</h3>
-      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ title }}</p>
+      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+        {{ title }}
+      </p>
       <p>{{ description }}</p>
     </div>
 
-    <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
-      <el-form-item label="Ваше имя" prop="name" :rules="[
-        {
-          required: true,
-          message: 'Пожалуйста, введите своё имя',
-          trigger: 'blur',
-        },
-      ]">
+    <el-form
+      :model="form"
+      label-width="auto"
+      ref="formRef"
+      class="max-w-96 my-12"
+      label-position="top"
+    >
+      <el-form-item
+        label="Ваше имя"
+        prop="name"
+        :rules="[
+          {
+            required: true,
+            message: 'Пожалуйста, введите своё имя',
+            trigger: 'blur',
+          },
+        ]"
+      >
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="Ваш телефон" prop="phone">
         <el-input v-model="form.phone" />
       </el-form-item>
-      <el-form-item label="Ваш емейл" prop="email" :rules="[
-        {
-          required: true,
-          message: 'Пожалуйста, введите адрес электронной почты',
-          trigger: 'blur',
-        },
-        {
-          type: 'email',
-          message: 'Пожалуйста, введите корректный адрес электронной почты',
-          trigger: ['blur', 'change'],
-        },
-      ]">
+      <el-form-item
+        label="Ваш емейл"
+        prop="email"
+        :rules="[
+          {
+            required: true,
+            message: 'Пожалуйста, введите адрес электронной почты',
+            trigger: 'blur',
+          },
+          {
+            type: 'email',
+            message: 'Пожалуйста, введите корректный адрес электронной почты',
+            trigger: ['blur', 'change'],
+          },
+        ]"
+      >
         <el-input v-model="form.email" />
       </el-form-item>
-      <el-form-item label="Сообщение" prop="desc" :rules="[
-        {
-          required: true,
-          message: 'Пожалуйста, введите своё сообщение',
-          trigger: 'blur',
-        },
-      ]">
+      <el-form-item
+        label="Сообщение"
+        prop="desc"
+        :rules="[
+          {
+            required: true,
+            message: 'Пожалуйста, введите своё сообщение',
+            trigger: 'blur',
+          },
+        ]"
+      >
         <el-input v-model="form.desc" type="textarea" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm(formRef)">Отправить заявку</el-button>
+        <el-button type="primary" @click="throttledFn"
+          >Отправить заявку</el-button
+        >
         <el-button @click="resetForm(formRef)">Очистить форму</el-button>
       </el-form-item>
     </el-form>
@@ -55,12 +82,16 @@
         <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
         <div class="mt-3 flex items-center gap-x-3">
           <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-          <a :target="item.target && '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
+          <a
+            :target="item.target && '_blank'"
+            rel="noopener noreferrer"
+            :href="item.href"
+            >{{ item.contact }}</a
+          >
         </div>
       </li>
     </ul>
   </div>
-
 </template>
 
 <script setup>
@@ -68,84 +99,84 @@ import { useThrottleFn } from "@vueuse/core";
 import { reactive, ref, inject } from "vue";
 import { ElMessage } from "element-plus";
 
-
 const { id } = defineProps(["id"]),
   { name, title, description } = inject("pages")[id],
   formRef = ref(),
   method = "POST",
   headers = {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
   form = reactive({
     name: "",
     phone: "",
     email: "",
-    desc: '',
+    desc: "",
   }),
   contactMethods = [
     {
       icon: "la:map-marker",
       contact: "ул. Степана Разина, д. 20",
-      title: "Калининград"
+      title: "Калининград",
     },
     {
       icon: "la:map-marker",
       contact: "площадь Журавлёва, д. 10",
-      title: "Москва"
+      title: "Москва",
     },
     {
       icon: "la:phone",
       contact: "+7 (906) 792-1244",
       title: "Телефон",
-      href: "tel:+79067921244"
+      href: "tel:+79067921244",
     },
     {
       icon: "la:envelope",
       contact: "briusova@gmail.com",
       title: "E-mail",
-      href: "mailto:briusova@gmail.com"
+      href: "mailto:briusova@gmail.com",
     },
     {
       icon: "la:telegram",
       contact: "https://t.me/abb_psy",
       title: "Телеграм",
       href: "https://t.me/abb_psy",
-      target: true
+      target: true,
     },
     {
       icon: "la:vk",
       contact: "https://vk.com/abb_psy",
       title: "ВКонтакте",
       href: "https://vk.com/abb_psy",
-      target: true
+      target: true,
     },
-  ], throttledFn = useThrottleFn(sendForm, 6000);
-
+  ],
+  throttledFn = useThrottleFn(sendForm, 6000);
 
 function resetForm(formEl) {
   formEl?.resetFields();
 }
 
-async function sendForm() {
-  const body = JSON.stringify(form);
-  try {
-    ElMessage("Отправка запроса...");
-    const response = await fetch("https://form.bryusova.ru", { method, headers, body });
-    ElMessage.closeAll();
-    if (response.ok) {
-      ElMessage.success(await response.text());
-      formRef.value?.resetFields();
-    } else ElMessage.error(`Ошибка: ${await response.text()}`);
-  } catch ({ message }) {
-    ElMessage.closeAll();
-    ElMessage.error(`Ошибка: ${message}`);
-  }
-}
-
-function submitForm(formEl) {
-  formEl?.validate((valid) => {
-    if (valid) throttledFn();
-    else ElMessage.error("Пожалуйста, заполните форму");
-  })
+function sendForm() {
+  formRef.value?.validate(async (valid) => {
+    if (valid) {
+      const body = JSON.stringify(form);
+      try {
+        ElMessage("Отправка запроса...");
+        const response = await fetch("https://form.bryusova.ru", {
+          method,
+          headers,
+          body,
+        });
+        ElMessage.closeAll();
+        if (response.ok) {
+          ElMessage.success(await response.text());
+          formRef.value?.resetFields();
+        } else ElMessage.error(`Ошибка: ${await response.text()}`);
+      } catch ({ message }) {
+        ElMessage.closeAll();
+        ElMessage.error(`Ошибка: ${message}`);
+      }
+    } else ElMessage.error("Пожалуйста, заполните форму");
+  });
 }
 </script>
