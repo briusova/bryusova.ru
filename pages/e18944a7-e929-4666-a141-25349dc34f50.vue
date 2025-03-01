@@ -1,12 +1,7 @@
 <template>
   <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8" un-cloak>
     <div class="rounded-3xl overflow-hidden shadow-2xl mb-24">
-      <img
-        src="my_images/veAOAZWU-Ys.jpg"
-        alt=""
-        decoding="async"
-        class="h-auto min-w-2xl"
-      />
+      <img src="my_images/veAOAZWU-Ys.jpg" alt="" decoding="async" class="h-auto min-w-2xl" />
     </div>
     <div class="max-w-xl space-y-3">
       <h3 class="text-indigo-600 font-semibold">{{ name }}</h3>
@@ -16,64 +11,44 @@
       <p>{{ description }}</p>
     </div>
 
-    <el-form
-      :model="form"
-      label-width="auto"
-      ref="formRef"
-      class="max-w-96 my-12"
-      label-position="top"
-    >
-      <el-form-item
-        label="Ваше имя"
-        prop="name"
-        :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите своё имя',
-            trigger: 'blur',
-          },
-        ]"
-      >
+    <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
+      <el-form-item label="Ваше имя" prop="name" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите своё имя',
+          trigger: 'blur',
+        },
+      ]">
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item label="Ваш телефон" prop="phone">
         <el-input v-model="form.phone" />
       </el-form-item>
-      <el-form-item
-        label="Ваш емейл"
-        prop="email"
-        :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите адрес электронной почты',
-            trigger: 'blur',
-          },
-          {
-            type: 'email',
-            message: 'Пожалуйста, введите корректный адрес электронной почты',
-            trigger: ['blur', 'change'],
-          },
-        ]"
-      >
+      <el-form-item label="Ваш емейл" prop="email" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите адрес электронной почты',
+          trigger: 'blur',
+        },
+        {
+          type: 'email',
+          message: 'Пожалуйста, введите корректный адрес электронной почты',
+          trigger: ['blur', 'change'],
+        },
+      ]">
         <el-input v-model="form.email" />
       </el-form-item>
-      <el-form-item
-        label="Сообщение"
-        prop="desc"
-        :rules="[
-          {
-            required: true,
-            message: 'Пожалуйста, введите своё сообщение',
-            trigger: 'blur',
-          },
-        ]"
-      >
+      <el-form-item label="Сообщение" prop="desc" :rules="[
+        {
+          required: true,
+          message: 'Пожалуйста, введите своё сообщение',
+          trigger: 'blur',
+        },
+      ]">
         <el-input v-model="form.desc" type="textarea" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="throttledFn"
-          >Отправить заявку</el-button
-        >
+        <el-button type="primary" @click="throttledFn">Отправить заявку</el-button>
         <el-button @click="resetForm(formRef)">Очистить форму</el-button>
       </el-form-item>
     </el-form>
@@ -82,16 +57,22 @@
         <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
         <div class="mt-3 flex items-center gap-x-3">
           <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-          <a
-            :target="item.target && '_blank'"
-            rel="noopener noreferrer"
-            :href="item.href"
-            >{{ item.contact }}</a
-          >
+          <a :target="item.target && '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
         </div>
       </li>
     </ul>
+
+
+
+
+
+
   </div>
+
+
+
+
+
 </template>
 
 <script setup>

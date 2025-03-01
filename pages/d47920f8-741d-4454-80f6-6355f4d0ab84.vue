@@ -19,12 +19,26 @@
                 </li>
             </ul>
         </div>
+
+
+<div class="sm:py-24 font-light antialiased [&amp;>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif] text-slate-800 overflow-hidden">
+ <h2 class="mb-6 mt-6 text-2xl sm:text-5xl">Здесь нет обязательств —</h2>
+  <h2 class="text-2xl sm:text-5xl">только честный диалог <span class="text-white bg-red-500 italic">&nbsp;и осознанный
+      выбор&nbsp;</span></h2>
+  <h1 class="sm:mt-24 text-3xl sm:text-7xl animate__animated" v-intersection-observer="([{ isIntersecting }]) => { anima = isIntersecting }"
+            :class="{ animate__fadeInRight: anima, animate__fadeOutRight: !anima, }">Терапия начинается тогда, <span
+      class="text-white bg-slate-800 italic">&nbsp;когда и Вы и я уверены:&nbsp;</span> этот путь — Ваш</h1>
+</div>
+
+
+
     </div>
 </section>
 </template>
 
 <script setup>
-import { inject } from "vue";
+import { vIntersectionObserver } from "@vueuse/components";
+import { inject, ref } from "vue";
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
@@ -85,7 +99,8 @@ const features = [
             "все методы и техники лично проверяю на практике"
         ]
     }
-];
+], 
+anima = ref(false);
 
 </script>
 

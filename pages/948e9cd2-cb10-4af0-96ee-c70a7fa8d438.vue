@@ -86,6 +86,7 @@ import { ref, computed, inject } from "vue";
 import { Icon } from '@iconify/vue';
 import ElementPlus from "element-plus";
 import "./node_modules/element-plus/dist/index.css";
+import "./node_modules/animate.css/animate.min.css";
 
 window.app.use(ElementPlus.default);
 window.app.component("Icon", Icon);
