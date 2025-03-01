@@ -4,7 +4,7 @@
             <div class="max-w-xl space-y-3 not-prose mb-6">
                 <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
                 <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-                <p>Скида на тест "Тотал" 7% по промокоду KOMPLEMED.</p>
+                <p>{{ the.description }} Очные консультации в Калининграде. Онлайн по всему миру.</p>
             </div>
 
 
