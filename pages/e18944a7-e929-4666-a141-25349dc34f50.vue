@@ -46,7 +46,7 @@
         <el-input v-model="form.desc" type="textarea" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="throttledFn">Отправить заявку</el-button>
+        <el-button type="primary" @click="submitForm(formRef)">Отправить заявку</el-button>
         <el-button @click="resetForm(formRef)">Очистить форму</el-button>
       </el-form-item>
     </el-form>
@@ -126,24 +126,26 @@ function resetForm(formEl) {
   formEl?.resetFields();
 }
 
-function sendForm() {
-  formRef.value?.validate(async (valid) => {
-    if (valid) {
-      const body = JSON.stringify(form);
-      try {
-        ElMessage("Отправка запроса...");
-        const response = await fetch("https://form.bryusova.ru", { method, headers, body });
-        ElMessage.closeAll();
-        if (response.ok) {
-          ElMessage.success(await response.text());
-          formRef.value?.resetFields();
-        } else ElMessage.error(`Ошибка: ${await response.text()}`);
-      } catch ({ message }) {
-        ElMessage.closeAll();
-        ElMessage.error(`Ошибка: ${message}`);
-      }
-    }
+async function sendForm() {
+  const body = JSON.stringify(form);
+  try {
+    ElMessage("Отправка запроса...");
+    const response = await fetch("https://form.bryusova.ru", { method, headers, body });
+    ElMessage.closeAll();
+    if (response.ok) {
+      ElMessage.success(await response.text());
+      formRef.value?.resetFields();
+    } else ElMessage.error(`Ошибка: ${await response.text()}`);
+  } catch ({ message }) {
+    ElMessage.closeAll();
+    ElMessage.error(`Ошибка: ${message}`);
+  }
+}
+
+function submitForm(formEl) {
+  formEl?.validate((valid) => {
+    if (valid) throttledFn();
     else ElMessage.error("Пожалуйста, заполните форму");
-  });
+  })
 }
 </script>
