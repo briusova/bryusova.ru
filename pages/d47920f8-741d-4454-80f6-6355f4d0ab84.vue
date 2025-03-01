@@ -27,7 +27,7 @@
       выбор&nbsp;</span></h2>
   <h1 class="sm:mt-24 text-3xl sm:text-7xl animate__animated" v-intersection-observer="([{ isIntersecting }]) => { anima = isIntersecting }"
             :class="{ animate__fadeInRight: anima, animate__fadeOutRight: !anima, }">Терапия начинается тогда, <span
-      class="text-white bg-slate-800 italic">&nbsp;когда и Вы и я уверены:&nbsp;</span> этот путь — Ваш</h1>
+      class="text-white bg-slate-800 italic">&nbsp;когда и Вы и я уверены&nbsp;</span>: этот путь — Ваш</h1>
 </div>
 
 
