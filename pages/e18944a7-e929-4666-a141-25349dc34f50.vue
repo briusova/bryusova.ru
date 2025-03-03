@@ -4,11 +4,10 @@
       <img src="my_images/veAOAZWU-Ys.jpg" alt="" decoding="async" class="h-auto min-w-2xl" />
     </div>
     <div class="max-w-xl space-y-3">
-      <h3 class="text-indigo-600 font-semibold">{{ name }}</h3>
-      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
-        {{ title }}
-      </p>
-      <p>{{ description }}</p>
+      <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
+      <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ visible }}<span class="blink underline decoration-slate-800 decoration-2 text-transparent">{{ title[length]
+          }}</span><span class="invisible">{{ invisible }}</span></p>
+      <p>{{ the.description }}</p>
     </div>
 
     <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
@@ -61,27 +60,16 @@
         </div>
       </li>
     </ul>
-
-
-
-
-
-
   </div>
-
-
-
-
-
 </template>
 
 <script setup>
 import { useThrottleFn } from "@vueuse/core";
-import { reactive, ref, inject } from "vue";
+import { reactive, ref, inject, computed } from "vue";
 import { ElMessage } from "element-plus";
 
 const { id } = defineProps(["id"]),
-  { name, title, description } = inject("pages")[id],
+  the = inject("pages")[id],
   formRef = ref(),
   method = "POST",
   headers = {
@@ -160,4 +148,29 @@ function sendForm() {
     } else ElMessage.error("Пожалуйста, заполните форму");
   });
 }
+
+const title = `${the.title}_`;
+const index = ref(0);
+setInterval(() => {
+  index.value += 1;
+}, 200);
+const length = computed(() => {
+  const count = Math.floor(index.value / title.length);
+  return count % 2 ? title.length - 1 : index.value - count * title.length;
+});
+
+const visible = computed(() => title.substring(0, length.value));
+const invisible = computed(() => title.substring(length.value + 1));
 </script>
+
+<style scoped>
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
