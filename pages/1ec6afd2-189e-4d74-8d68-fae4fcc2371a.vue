@@ -2,13 +2,7 @@
   <section class="py-14 not-prose overflow-hidden" un-cloak>
     <div class="max-w-screen-xl mx-auto md:px-8">
       <p class="text-center text-sm text-gray-700 font-semibold">{{ the.title }}</p>
-      <p class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose text-center">Жизнь невероятно щедра
-        ко
-        мне – сколько себя помню, меня всегда окружали интересные люди. В их числе представители разных
-        профессий: артисты, врачи, писатели, композиторы, учителя, учёные, музыканты, художники. Список, если хорошенько
-        покопаться в памяти, можно продолжать до бесконечности. Каждый логотип ниже — не просто проект или организация.
-        Это символ взаимной поддержки, плодотворного сотрудничества и общей цели. Вместе мы стремимся сделать мир лучше.
-      </p>
+
       <div class="flex justify-center items-center flex-wrap gap-x-12 gap-y-6 mt-6 text-gray-600 text-sm">
         <a class="w-64 flex flex-col pa-4 items-center rounded-xl text-center hover:shadow-xl"
           v-for="{ src, title, href } in part" :href="href" target="_blank" rel="noopener noreferrer"><img :src="src"
@@ -64,16 +58,6 @@ const part = [
     src: "my_images/bach.png",
     title: "Цветочная терапия Баха",
     href: "https://bach-flowers.ru",
-  },
-  {
-    src: "my_images/eko.png",
-    title: "Фестиваль Экотворец",
-    href: "https://ekotvorec.ru",
-  },
-  {
-    src: "my_images/book4.png",
-    title: "Мёртвые души, том 2",
-    href: "https://deadsouls2.ru",
   },
 ];
 </script>

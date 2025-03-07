@@ -7,7 +7,7 @@
       <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
       <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ visible }}<span class="blink underline decoration-slate-800 decoration-2 text-transparent">{{ title[length]
           }}</span><span class="invisible">{{ invisible }}</span></p>
-      <p>{{ the.description }}</p>
+   
     </div>
 
     <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
@@ -88,11 +88,6 @@ const { id } = defineProps(["id"]),
       title: "Калининград",
     },
     {
-      icon: "la:map-marker",
-      contact: "площадь Журавлёва, д. 10",
-      title: "Москва",
-    },
-    {
       icon: "la:phone",
       contact: "+7 (906) 792-1244",
       title: "Телефон",
@@ -106,16 +101,9 @@ const { id } = defineProps(["id"]),
     },
     {
       icon: "la:telegram",
-      contact: "https://t.me/abb_psy",
+      contact: "https://t.me/@Sasha_Bryusova",
       title: "Телеграм",
-      href: "https://t.me/abb_psy",
-      target: true,
-    },
-    {
-      icon: "la:vk",
-      contact: "https://vk.com/abb_psy",
-      title: "ВКонтакте",
-      href: "https://vk.com/abb_psy",
+      href: "https://t.me/Sasha_Bryusova",
       target: true,
     },
   ],

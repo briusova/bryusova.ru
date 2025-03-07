@@ -4,7 +4,7 @@
             <div class="max-w-xl space-y-3 not-prose mb-6">
                 <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
                 <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
-                <p>{{ the.description }} Больше статей на сайте психологов №1 <a href="https://www.b17.ru/briusova"
+                <p>Больше статей на сайте психологов №1 <a href="https://www.b17.ru/briusova"
                         target="_blank" rel="noopener noreferrer" text-cyan-600=""
                         hover:text-blue-600="">https://www.b17.ru/briusova</a>, а также в моём <a
                         href="https://t.me/abb_psy" target="_blank" rel="noopener noreferrer" text-cyan-600=""
@@ -12,7 +12,7 @@
             </div>
 
             <ul class="divide-y divide-slate-100 not-prose">
-                <li v-for="{ header, to, description, images } in the.$children">
+                <li v-for="{ header, to, images } in the.$children">
                     <RouterLink :to="to" class="flex items-start gap-4 px-4 py-3">
                         <div class="flex items-center shrink-0">
                             <img :src="images[0]?.url" :alt="images[0]?.alt" class="w-20 rounded">
