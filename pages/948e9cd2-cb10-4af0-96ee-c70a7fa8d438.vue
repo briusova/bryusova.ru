@@ -22,7 +22,7 @@
   <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 lg:flex lg:space-x-6" un-cloak>
     <div class="flex justify-between">
       <router-link to="/">
-        <img :src="the.images[1].url" width="100" height="50" decoding="async" />
+        <img :src="the.images[1].url" width="80" height="50" decoding="async" />
       </router-link>
       <button class="text-gray-500 outline-none lg:hidden h-6 bg-white" @click="toggleMenu">
         <icon icon="mdi:close" class="h-6 w-6" v-if="isOpen"></icon>
