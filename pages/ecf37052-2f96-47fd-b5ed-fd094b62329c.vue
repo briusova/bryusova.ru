@@ -7,7 +7,8 @@
         <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">{{ the.title }}</h2>
 
         <p class="border-l-4 pl-2 border-slate-400 text-xl mt-10 mb-6">психолог-консультант</p>
-        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-10">специалист по оздоровлению</p>
+        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-6">специалист по оздоровлению</p>
+                <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-10">практика с 2010 года</p>
 
         <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
           <router-link :to="the.$next.to"
