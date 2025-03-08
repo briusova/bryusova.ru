@@ -20,19 +20,15 @@
                             {{ plan.desc }}
                         </p>
                         <div class="flex flex-col"><router-link :to="the.$children[index].to"
-                            class='px-3 py-3 rounded-lg text-center font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150'>
-                            выбрать услугу
-                        </router-link></div>
+                                class='px-3 py-3 rounded-lg text-center font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150'>
+                                выбрать услугу
+                            </router-link></div>
                     </div>
                     <ul class='p-8 space-y-3'>
 
                         <li v-for="(feature, featureIndex) in plan.features" :key="featureIndex"
                             class='flex items-center gap-5'>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
+                            <icon icon="mdi:checkbox-marked-circle-outline" class="h-5 w-5 text-indigo-600"></icon>
                             {{ feature }}
                         </li>
                     </ul>

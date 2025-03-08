@@ -76,11 +76,10 @@
 
 
 <script setup>
-import { ref, inject } from "vue";
+import { inject } from "vue";
 
 const { id } = defineProps(["id"]);
-const pages = inject("pages");
-const the = pages[id];
+const the = inject("pages")[id];
 const person = {
     men: {
         name: ["Иван", "Александр", "Сергей", "Андрей", "Дмитрий", "Алексей", "Максим", "Владимир", "Евгений", "Игорь"],
