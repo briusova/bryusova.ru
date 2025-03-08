@@ -1,12 +1,13 @@
 <template>
-  <section class="py-16 not-prose overflow-hidden">
-    <div class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8">
-      <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl relative">
+  <section class="py-16 not-prose overflow-hidden  overflow-visible">
+    <div
+      class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8  overflow-visible">
+      <div class="flex-none px-4 sm:max-w-lg md:px-0 lg:max-w-xl relative overflow-visible">
         <h1 class="text-sm text-indigo-600 font-medium">индивидуальный подход к самопознанию</h1>
         <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">{{ the.title }}</h2>
 
-<p class="border-l-2 pl-2 border-slate-400 text-2xl">психолог-консультант</p>
-<p class="border-l-2 pl-2 border-slate-400 text-2xl">специалист по оздоровлению</p>
+        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-10 mb-6">психолог-консультант</p>
+        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-10">специалист по оздоровлению</p>
 
         <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
           <router-link :to="the.$next.to"
@@ -14,7 +15,7 @@
             Давайте начнём
           </router-link>
           <router-link to="/приём/"
-            class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">Записаться
+            class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 bg-white active:bg-gray-100 border rounded-lg md:inline-flex">Записаться
             <icon icon="mdi:arrow-right"></icon>
           </router-link>
         </div>

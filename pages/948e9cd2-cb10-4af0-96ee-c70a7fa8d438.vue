@@ -21,7 +21,7 @@
   </div>
   <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 lg:flex lg:space-x-6" un-cloak>
     <div class="flex justify-between">
-      <router-link to="/">
+      <router-link to="/" class="hidden md:block">
         <img :src="the.images[1].url" width="80" height="50" decoding="async" />
       </router-link>
       <button class="text-gray-500 outline-none lg:hidden h-6 bg-white" @click="toggleMenu">
