@@ -32,7 +32,16 @@
                 </div>
             </section>
 
-
+            <div
+                class="sm:py-24 font-light antialiased [&amp;>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif] text-slate-800 overflow-hidden">
+                <h2 class="mb-6 mt-6 text-2xl sm:text-5xl">Гармония —</h2>
+                <h2 class="text-2xl sm:text-5xl">это не отсутствие <span
+                        class="text-white bg-red-500 italic">&nbsp;проблем&nbsp;</span></h2>
+                <h1 class="sm:mt-24 text-3xl sm:text-7xl animate__animated"
+                    v-intersection-observer="([{ isIntersecting }]) => { anima = isIntersecting }"
+                    :class="{ animate__fadeInRight: anima, animate__fadeOutRight: !anima, }">а умение преодолевать 
+                    их, <span class="text-white bg-slate-800 italic">&nbsp;не теряя&nbsp;</span> себя</h1>
+            </div>
 
         </div>
     </section>
@@ -40,11 +49,13 @@
 
 <script setup>
 import { ElImage } from "element-plus";
-import { inject } from "vue";
+import { vIntersectionObserver } from "@vueuse/components";
+import { inject, ref } from "vue";
 import { Right } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
+const anima = ref(false);
 
 
 </script>
