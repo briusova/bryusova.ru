@@ -3,12 +3,12 @@
     <div
       class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between  md:flex md:px-8  overflow-visible">
       <div class="flex-none px-4 sm:max-w-lg md:px-0 lg:max-w-xl relative overflow-visible">
-        <h1 class="text-sm text-indigo-600 font-medium">индивидуальный подход к самопознанию</h1>
+        <h1 class="text-sm text-indigo-600 font-medium">оздоровительная психология</h1>
         <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">{{ the.title }}</h2>
 
-        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-10 mb-6">психолог-консультант</p>
-        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-6">специалист по оздоровлению</p>
-                <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-10">практика с 2010 года</p>
+        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-10 mb-6">Консультации, коучинг</p>
+        <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-6">Профориентация, МАК-карты</p>
+                <p class="border-l-4 pl-2 border-slate-400 text-xl mt-6 mb-10">Семинары, тренинги</p>
 
         <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
           <router-link :to="the.$next.to"

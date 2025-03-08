@@ -1,61 +1,90 @@
 <template>
-    <section class="py-14">
+    <section class='py-14'>
         <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
             <div class="max-w-xl space-y-3 not-prose mb-6">
                 <h3 class="text-indigo-600 font-semibold">{{ the.name }}</h3>
                 <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">{{ the.title }}</p>
 
             </div>
+            <div class='mt-16 grid justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+                <div v-for="(plan, index) in plans" :key="index"
+                    class="relative flex flex-col items-stretch rounded-xl border-2 mt-6">
+                    <div class="p-8 space-y-4 border-b">
+                        <span class='text-indigo-600 font-medium'>
+                            {{ plan.name }}
+                        </span>
+                        <div class='text-gray-800 text-3xl font-semibold'>
+                            от {{ plan.price }} <span class="text-xl text-gray-600 font-normal"> рублей</span>
+                        </div>
+                        <p>
+                            {{ plan.desc }}
+                        </p>
+                        <div class="flex flex-col"><router-link :to="the.$children[index].to"
+                            class='px-3 py-3 rounded-lg text-center font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150'>
+                            выбрать услугу
+                        </router-link></div>
+                    </div>
+                    <ul class='p-8 space-y-3'>
 
-
-            <section class="not-prose mt-12 mx-auto px-4 max-w-screen-xl lg:px-8">
-                <div class="mt-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-
-                    <article v-for="{ title, description, images, to } in the.$children"
-                        class="max-w-md mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm">
-                        <router-link :to="to">
-                            <el-image :src="images[0].url" lazy="" :alt="images[0].alt" fit="cover"
-                                class="w-full h-auto rounded-t-md"></el-image>
-                            <div class="pt-3 ml-4 mr-2 mb-3">
-                                <h3 class="text-xl text-gray-900">
-                                    {{ title }}
-                                </h3>
-                                <p class="text-gray-400 text-sm mt-1">{{ description }}</p>
-                            </div>
-                            <el-button :to="to" class="ma-4">подробнее<el-icon class="el-icon--right">
-                                    <right>
-                                    </right>
-                                </el-icon></el-button>
-                        </router-link>
-
-                    </article>
+                        <li v-for="(feature, featureIndex) in plan.features" :key="featureIndex"
+                            class='flex items-center gap-5'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            {{ feature }}
+                        </li>
+                    </ul>
                 </div>
-            </section>
-
-            <div
-                class="sm:py-24 font-light antialiased [&amp;>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif] text-slate-800 overflow-hidden">
-                <h2 class="mb-6 mt-6 text-2xl sm:text-5xl">Гармония —</h2>
-                <h2 class="text-2xl sm:text-5xl">это не отсутствие <span
-                        class="text-white bg-red-500 italic">&nbsp;проблем&nbsp;</span></h2>
-                <h1 class="sm:mt-24 text-3xl sm:text-7xl animate__animated"
-                    v-intersection-observer="([{ isIntersecting }]) => { anima = isIntersecting }"
-                    :class="{ animate__fadeInRight: anima, animate__fadeOutRight: !anima, }">а умение преодолевать 
-                    их, <span class="text-white bg-slate-800 italic">&nbsp;не теряя&nbsp;</span> себя</h1>
             </div>
-
         </div>
     </section>
 </template>
 
 <script setup>
-import { ElImage } from "element-plus";
-import { vIntersectionObserver } from "@vueuse/components";
-import { inject, ref } from "vue";
-import { Right } from '@element-plus/icons-vue';
-const { id } = defineProps(["id"]);
-const pages = inject("pages");
-const the = pages[id];
-const anima = ref(false);
 
+import { inject } from "vue";
+
+const { id } = defineProps(["id"]);
+const the = inject("pages")[id];
+const plans = [
+    {
+        name: "Консультации",
+        desc: "индивидуальная поддержка в решении психологических, эмоциональных и личностных задач",
+        price: 4000,
+
+        features: [
+            "психологическая консультация",
+            "консультация с МАК-картами",
+            "метафорический прогноз",
+            "отпуск с психологом",
+        ],
+    },
+    {
+        name: "Тест \"Тотал\"",
+        desc: "тест платформы Проф-Диалог для профориентации и психологической диагностики",
+        price: 2990,
+
+        features: [
+            "особенности личности",
+            "подходящие профессии",
+            "выраженность компетенций",
+            "психологический портрет",
+        ],
+    },
+    {
+        name: "Обучение",
+        desc: "учебные марафоны, вебинары и тренинги, направленные на развитие психологической саморегуляции",
+        price: 2500,
+
+        features: [
+            "управление эмоциями",
+            "антистресс-стратегии",
+            "техники самопомощи",
+            "практики осознанности",
+        ],
+    },
+];
 
 </script>
