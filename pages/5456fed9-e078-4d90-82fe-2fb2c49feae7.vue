@@ -48,7 +48,7 @@
                     </router-link>
                 </div>
             </div>
-            <div
+            <!--div
                 class="px-4 md:px-0 sm:pt-24 sm:pb-6 font-light antialiased [&amp;>*]:font-[Helvetica_Neue,Helvetica,Arial,sans-serif] text-slate-800 overflow-hidden">
                 <h2 class="mb-6 mt-6 text-2xl sm:text-5xl">Гармония —</h2>
                 <h2 class="text-2xl sm:text-5xl">это не отсутствие <span
@@ -57,7 +57,7 @@
                     v-intersection-observer="([{ isIntersecting }]) => { anima = isIntersecting }"
                     :class="{ animate__fadeInRight: anima, animate__fadeOutRight: !anima, }">а умение преодолевать
                     их, <span class="text-white bg-slate-800 italic">&nbsp;не теряя&nbsp;</span> себя</h1>
-            </div>
+            </div-->
         </div>
     </section>
 </template>
