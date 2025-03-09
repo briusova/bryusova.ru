@@ -19,33 +19,28 @@
       </div>
     </div>
   </div>
-  <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 lg:flex lg:space-x-6" un-cloak>
+  <nav class="not-prose relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 space-x-6 hidden lg:flex" un-cloak>
     <div class="flex justify-between">
-      <router-link to="/" class="hidden md:block">
+      <router-link to="/">
         <img :src="the.images[1].url" width="80" height="50" decoding="async" />
       </router-link>
-      <button class="text-gray-500 outline-none lg:hidden h-6 bg-white" @click="toggleMenu">
-        <icon icon="mdi:close" class="h-6 w-6" v-if="isOpen"></icon>
-        <icon icon="mdi:menu" class="h-6 w-6" v-else></icon>
-      </button>
     </div>
-    <div :class="isOpen ? 'absolute inset-x-0 px-4 border-b bg-white lg:border-none lg:static' : 'hidden'"
-      class="flex-1 justify-between mt-12 lg:text-sm lg:font-medium lg:flex lg:mt-0">
-      <ul class="items-center space-y-5 lg:flex lg:space-x-6 lg:space-y-0 lg:ml-12">
+    <div class="flex-1 justify-between text-sm font-medium flex mt-0">
+      <ul class="items-center flex space-x-6 space-y-0 ml-12">
         <li class="text-gray-500 hover:text-indigo-600" v-for="(item, idx) in the.$children.slice(1).slice(0, -1)"
           :key="idx">
           <router-link :to="item.to" v-text="item.name"></router-link>
         </li>
-        <li class="order-2 py-5 lg:py-0">
+        <li class="order-2 py-0">
           <router-link :to="the.children[1].to"
-            class="py-2 px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 block lg:py-3 lg:inline">
+            class="px-5 rounded-lg font-medium text-white text-center bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 duration-150 py-3 inline">
             Приступим
           </router-link>
         </li>
       </ul>
     </div>
   </nav>
-  <div class="min-h-dvh"><router-view></router-view></div>
+  <div class="min-h-dvh mt-16 lg:mt-0"><router-view></router-view></div>
   <footer class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>
     <div class="max-w-7xl sm:mx-auto sm:text-center">
       <img :src="the.images[1].url" class="w-20 sm:mx-auto" decoding="async" />
@@ -93,10 +88,6 @@ const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
 const docs = computed(() => the.children.find(({ name }) => name === "документы"));
-const isOpen = ref(false);
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
-};
 const contactMethods = [
   {
     icon: "mdi:phone-outline",
