@@ -7,9 +7,9 @@
           <h1 class="text-sm text-indigo-600 font-medium">оздоровительная психология</h1>
           <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">{{ the.title }}</h2>
 
-          <p class="border-l-1 pl-2 border-indigo-600 text-xl mt-10 mb-6">Консультации, коучинг</p>
-          <p class="border-l-1 pl-2 border-indigo-600 text-xl mt-6 mb-6">Профориентация, МАК-карты</p>
-          <p class="border-l-1 pl-2 border-indigo-600 text-xl mt-6 mb-10">Семинары, тренинги</p>
+          <p class="border-l-2 pl-2 border-indigo-600 text-xl mt-10 mb-6">Консультации, коучинг</p>
+          <p class="border-l-2 pl-2 border-indigo-600 text-xl mt-6 mb-6">Профориентация, МАК-карты</p>
+          <p class="border-l-2 pl-2 border-indigo-600 text-xl mt-6 mb-10">Семинары, тренинги</p>
 
           <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
             <router-link :to="the.$next.to"
