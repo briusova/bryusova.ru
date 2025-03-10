@@ -99,6 +99,7 @@ const tableData = [
     {
         name: "Отпуск с психологом",
         price: " по договорённости",
+        link: "https://vk.com/market/product/otpusk-s-psikhologom-v-kaliningrade-219123587-7329597"
     },
     {
         name: "Аналитика цифровых проектов",
