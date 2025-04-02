@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-import { ref, computed, inject } from "vue";
+import { computed, inject } from "vue";
 import { Icon } from '@iconify/vue';
 import ElementPlus from "element-plus";
 import "./node_modules/element-plus/dist/index.css";

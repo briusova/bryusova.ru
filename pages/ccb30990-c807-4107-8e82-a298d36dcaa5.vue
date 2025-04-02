@@ -69,7 +69,7 @@
 </template>
 <script setup>
 import { inject } from "vue";
-import { Back, Right } from '@element-plus/icons-vue';
+import { Back } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
@@ -78,6 +78,7 @@ const tableData = [
     {
         name: "Психологическая консультация",
         price: " 4.000 руб / 60-90 минут",
+            link: "/услуги/консультации/психологическая_консультация"
     },
     {
         name: "Консультация с МАК (метафорические ассоциативные карты)",
