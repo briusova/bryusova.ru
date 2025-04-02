@@ -49,6 +49,11 @@ const part = [
     title: "Школа саморегуляции",
     href: "https://natalie-school.ru",
   },
+    {
+    src: "my_images/oppl.png",
+    title: "ОППЛ",
+    href: "https://oppl.ru",
+  },
   {
     src: "my_images/med.png",
     title: "Компания Вся Медицина",
