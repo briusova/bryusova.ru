@@ -57,7 +57,7 @@
 <el-button-group class="not-prose">
     <el-button type="primary" :icon="ArrowLeft" tag="a" href="/услуги/консультации/">Консультации</el-button>
     <el-button type="primary" tag="a" href="/статьи/мак/">
-      Подробная статья про МАК<el-icon class="el-icon--right"><arrowright></arrowright></el-icon>
+      Подробная статья про МАК<el-icon class="el-icon--right"><arrow-right></arrow-right></el-icon>
     </el-button>
   </el-button-group>
 
