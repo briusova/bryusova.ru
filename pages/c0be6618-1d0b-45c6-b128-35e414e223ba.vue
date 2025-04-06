@@ -104,6 +104,8 @@
             <p>&nbsp;Подробнее о консультации по методу: https://www.b17.ru/blog/san_method_consultation/</p>
             <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{
                 the.parent.header }}</el-button>
+                <p><el-button class="not-prose" type="primary" :icon="Back" tag="a"
+                    href="/услуги/обучение/">Обучение</el-button></p>
 
         </div>
     </section>
