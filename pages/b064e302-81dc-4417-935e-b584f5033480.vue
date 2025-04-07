@@ -383,18 +383,27 @@
             
             <p>Спасибо, что дочитали до конца! Надеюсь, данная статья помогла вам узнать, насколько полезными могут быть
                 Метафорические Ассоциативные Карты.</p>
-            <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{
-                the.parent.header }}</el-button>
+            
 
-                <p><el-button class="not-prose" type="primary" :icon="Back" tag="a"
-                    href="/услуги/консультации/">Консультации</el-button></p>
+          <el-button-group class="not-prose">
+                <el-button type="primary" :icon="ArrowLeft" tag="router-link" :to="the.parent.to">{{
+                    the.parent.header }}</el-button>
+                <el-button type="primary" :icon="ArrowLeft" tag="a" href="/услуги/консультации/">
+                    Консультации
+                </el-button>
+            </el-button-group>
+
+
+
+
+
 
         </div>
     </section>
 </template>
 <script setup>
 import { inject } from "vue";
-import { Back } from '@element-plus/icons-vue';
+import { ArrowLeft } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
