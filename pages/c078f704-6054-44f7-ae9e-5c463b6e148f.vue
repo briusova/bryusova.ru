@@ -122,15 +122,13 @@
                 реагируете на стрессовые ситуации. Этот тест помогает обнаружить скрытые таланты и ресурсы, о которых
                 вы, возможно, даже не подозревали.</p>
             
-            <p>Чтобы пройти тест и посмотреть пример отчёта, перейдите по ссылке:</p>
+            <p><b>Чтобы пройти тест и посмотреть пример отчёта, перейдите по ссылке</b>:</p>
             
-            <p><a
-                    href="https://career.prof-dialog.ru/test-total" target="_blank" rel="nofollow"
-                    style="color: rgb(50, 86, 131); outline: none; cursor: pointer;">https://career.prof-dialog.ru/test-total</a>
+            <p><a href="https://career.prof-dialog.ru/test-total" target="_blank" rel="nofollow" style="color: rgb(50, 86, 131); outline: none; cursor: pointer;">https://career.prof-dialog.ru/test-total</a>
                 
                 </p>
             
-            <p>По промокоду <b>KOMPLEMED </b>можно получить <b>скидку 7%</b> не только на прохождение теста «Тотал», но и на все
+            <p>По промокоду <b>KOMPLEMED </b><b>скидка 7%</b> не только на прохождение теста «Тотал», но и на все
                 остальные услуги платформы «Проф-Диалог».</p>
             <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{
                 the.parent.header }}</el-button>
