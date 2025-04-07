@@ -133,7 +133,20 @@
                 воздействия на людей, с которыми я работаю.</p>
             <p>Благодаря личному опыту я вижу, как эти методы приносят ощутимые результаты и положительные изменения в
                 жизни тех, кто ко мне обращается.</p>
-                <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{ the.parent.header }}</el-button>
+            
+
+
+          <el-button-group class="not-prose">
+                <el-button type="primary" :icon="ArrowLeft" tag="router-link" :to="the.parent.to">{{
+                    the.parent.header }}</el-button>
+                <el-button type="primary" :icon="ArrowLeft" tag="a" href="/услуги/обучение/роп/">
+                    Курс РОП
+                </el-button>
+            </el-button-group>
+
+
+
+
 
         </div>
     </section>
@@ -142,7 +155,7 @@
 
 <script setup>
 import { inject } from "vue";
-import { Back } from '@element-plus/icons-vue';
+import { ArrowLeft } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
