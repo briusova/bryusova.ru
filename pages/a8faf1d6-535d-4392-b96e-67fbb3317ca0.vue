@@ -153,11 +153,18 @@
                     оценки возможных рисков и последствий.</span></p>
 
 
-            <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">На
-                главную</el-button>
+   
 
-            <p><el-button class="not-prose" type="primary" :icon="Back" tag="a"
-                    href="/услуги/обучение/">Обучение</el-button></p>
+
+
+  <el-button-group class="not-prose">
+    <el-button type="primary" :icon="ArrowLeft" tag="router-link" :to="the.parent.to">На главную</el-button>
+    <el-button type="primary" :icon="ArrowLeft" tag="a" href="/услуги/обучение/">
+      Обучение
+    </el-button>
+  </el-button-group>
+
+
             
         </div>
     </section>
@@ -165,7 +172,7 @@
 
 <script setup>
 import { inject } from "vue";
-import { Back } from '@element-plus/icons-vue';
+import { ArrowLeft } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];

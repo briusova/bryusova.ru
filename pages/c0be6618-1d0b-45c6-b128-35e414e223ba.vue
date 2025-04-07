@@ -101,18 +101,26 @@
             <p>Уверена, это направление позволит более эффективно помогать клиентам в их стремлении к гармонии, росту и
                 саморазвитию.</p>
             
-            <p>&nbsp;Подробнее о консультации по методу: https://www.b17.ru/blog/san_method_consultation/</p>
-            <el-button class="not-prose" tag="router-link" :to="the.parent.to" :icon="Back" type="primary">{{
+            <p>Как проходит консультация по методу: https://www.b17.ru/blog/san_method_consultation/</p>
+           
+   
+
+  <el-button-group class="not-prose">
+    <el-button type="primary" :icon="ArrowLeft" tag="router-link" :to="the.parent.to">{{
                 the.parent.header }}</el-button>
-                <p><el-button class="not-prose" type="primary" :icon="Back" tag="a"
-                    href="/услуги/обучение/">Обучение</el-button></p>
+    <el-button type="primary" :icon="ArrowLeft" tag="a" href="/услуги/обучение/">
+      Обучение
+    </el-button>
+  </el-button-group>
+
+
 
         </div>
     </section>
 </template>
 <script setup>
 import { inject } from "vue";
-import { Back } from '@element-plus/icons-vue';
+import { ArrowLeft } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
