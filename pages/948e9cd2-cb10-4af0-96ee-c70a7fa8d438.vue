@@ -79,10 +79,8 @@
 import { computed, inject } from "vue";
 import { Icon } from '@iconify/vue';
 import ElementPlus from "element-plus";
-import "./node_modules/element-plus/dist/index.css";
-import "./node_modules/animate.css/animate.min.css";
 
-window.app.use(ElementPlus.default);
+window.app.use(ElementPlus);
 window.app.component("Icon", Icon);
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
@@ -112,3 +110,7 @@ const contactMethods = [
 
 ];
 </script>
+<style>
+@import "./node_modules/element-plus/dist/index.css";
+@import "./node_modules/animate.css/animate.min.css";
+</style>
