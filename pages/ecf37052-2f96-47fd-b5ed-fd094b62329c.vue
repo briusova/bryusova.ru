@@ -35,7 +35,7 @@
 
 
 
-<script setup>
+<script setup vapor>
 import { inject } from "vue";
 const { id } = defineProps(["id"]);
 const pages = inject("pages");

@@ -75,7 +75,7 @@
   </footer>
 </template>
 
-<script setup>
+<script setup vapor>
 import { computed, inject } from "vue";
 import { Icon } from '@iconify/vue';
 import ElementPlus from "element-plus";

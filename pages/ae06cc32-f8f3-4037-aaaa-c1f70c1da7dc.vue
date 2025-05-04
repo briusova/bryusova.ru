@@ -38,7 +38,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup vapor>
 
 import { inject } from "vue";
 

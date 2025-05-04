@@ -36,7 +36,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup vapor>
 import { ref, reactive, inject } from "vue";
 
 const { id } = defineProps(["id"]);

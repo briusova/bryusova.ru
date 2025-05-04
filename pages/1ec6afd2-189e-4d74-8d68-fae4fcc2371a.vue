@@ -17,7 +17,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup vapor>
 import { StarFilled } from '@element-plus/icons-vue';
 import { inject } from "vue";
 const { id } = defineProps(["id"]);

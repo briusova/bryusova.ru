@@ -83,7 +83,7 @@
         </div>
     </section>
 </template>
-<script setup>
+<script setup vapor>
 import { inject } from "vue";
 import { Back } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);

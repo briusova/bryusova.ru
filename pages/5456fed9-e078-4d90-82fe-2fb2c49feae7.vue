@@ -63,7 +63,7 @@
         </div>
     </section>
 </template>
-<script setup>
+<script setup vapor>
 import { vIntersectionObserver } from "@vueuse/components";
 import { inject, ref } from "vue";
 import { Right } from '@element-plus/icons-vue';

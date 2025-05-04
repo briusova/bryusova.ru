@@ -63,7 +63,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { useThrottleFn } from "@vueuse/core";
 import { reactive, ref, inject, computed } from "vue";
 import { ElMessage } from "element-plus";

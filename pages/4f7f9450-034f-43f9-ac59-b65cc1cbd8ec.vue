@@ -151,7 +151,7 @@
 </template>
 
 
-<script setup>
+<script setup vapor>
 import { inject } from "vue";
 import { ArrowLeft } from '@element-plus/icons-vue';
 const { id } = defineProps(["id"]);
