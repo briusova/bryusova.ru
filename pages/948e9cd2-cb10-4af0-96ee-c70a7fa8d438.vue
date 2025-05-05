@@ -76,12 +76,13 @@
 </template>
 
 <script setup vapor>
-import { computed, inject } from "vue";
+import { computed, inject, getCurrentInstance } from "vue";
 import { Icon } from '@iconify/vue';
 import ElementPlus from "element-plus";
 
-window.app.use(ElementPlus);
-window.app.component("Icon", Icon);
+const { appContext: { app } } = getCurrentInstance();
+app.use(ElementPlus);
+app.component("Icon", Icon);
 const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
