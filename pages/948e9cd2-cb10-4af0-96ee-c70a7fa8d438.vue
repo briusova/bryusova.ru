@@ -43,7 +43,7 @@
   <div class="min-h-dvh mt-16 lg:mt-0"><router-view></router-view></div>
   <footer class="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto not-prose" un-cloak>
     <div class="max-w-7xl sm:mx-auto sm:text-center">
-      <img :src="the.images[1].url" class="w-20 sm:mx-auto" decoding="async" />
+      <router-link to="/"><img :src="the.images[1].url" class="w-20 sm:mx-auto" decoding="async" /></router-link>
       <p class="leading-relaxed mt-2 text-[12px]">
         Копирование материала возможно только с согласия администрации сайта. Использование любой медицинской информации
         в личных целях требует дополнительной консультации врача. Все данные, опубликованные на сайте https://bryusova.ru,
