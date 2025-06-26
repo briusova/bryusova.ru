@@ -10,7 +10,7 @@
    
     </div>
 
-    <el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
+    <!--el-form :model="form" label-width="auto" ref="formRef" class="max-w-96 my-12" label-position="top">
       <el-form-item label="Ваше имя" prop="name" :rules="[
         {
           required: true,
@@ -50,7 +50,7 @@
         <el-button type="primary" @click="throttledFn">Отправить заявку</el-button>
         <el-button @click="resetForm(formRef)">Очистить форму</el-button>
       </el-form-item>
-    </el-form>
+    </el-form-->
     <ul class="flex flex-wrap gap-x-12 gap-y-6 items-center lg:gap-x-24">
       <li v-for="(item, idx) in contactMethods" :key="idx">
         <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
@@ -64,13 +64,13 @@
 </template>
 
 <script setup vapor>
-import { useThrottleFn } from "@vueuse/core";
-import { reactive, ref, inject, computed } from "vue";
-import { ElMessage } from "element-plus";
+//import { useThrottleFn } from "@vueuse/core";
+import { ref, inject, computed } from "vue";
+//import { ElMessage } from "element-plus";
 
 const { id } = defineProps(["id"]),
   the = inject("pages")[id],
-  formRef = ref(),
+  /*formRef = ref(),
   method = "POST",
   headers = {
     "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const { id } = defineProps(["id"]),
     phone: "",
     email: "",
     desc: "",
-  }),
+  }),*/
   contactMethods = [
     {
       icon: "la:map-marker",
@@ -106,10 +106,10 @@ const { id } = defineProps(["id"]),
       href: "https://t.me/Sasha_Bryusova",
       target: true,
     },
-  ],
-  throttledFn = useThrottleFn(sendForm, 6000);
+  ];
+  //throttledFn = useThrottleFn(sendForm, 6000);
 
-function resetForm(formEl) {
+/*function resetForm(formEl) {
   formEl?.resetFields();
 }
 
@@ -136,6 +136,7 @@ function sendForm() {
     } else ElMessage.error("Пожалуйста, заполните форму");
   });
 }
+*/
 
 const title = `${the.title}_`;
 const index = ref(0);

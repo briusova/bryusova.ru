@@ -1,6 +1,6 @@
 {
-  "_compiler-sfc-DUpFnHsr.js": {
-    "file": "assets/compiler-sfc-DUpFnHsr.js",
+  "_compiler-sfc-CHbDt8t7.js": {
+    "file": "assets/compiler-sfc-CHbDt8t7.js",
     "name": "compiler-sfc"
   },
   "_sucrase-DTaNgZ3p.js": {
@@ -8,55 +8,54 @@
     "name": "sucrase"
   },
   "index.html": {
-    "file": "assets/index-CymazWK5.js",
+    "file": "assets/index-DZp-kO1Q.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "imports": [
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-DUpFnHsr.js"
+      "_compiler-sfc-CHbDt8t7.js"
     ],
     "dynamicImports": [
-      "src/views/MultiView.vue",
-      "src/views/SingleView.vue",
-      "src/views/SingleView.vue",
+      "src/views/PageView.vue",
+      "src/views/RootView.vue",
       "src/views/NotFoundView.vue"
     ],
     "css": [
       "assets/index-vGiKZPT9.css"
     ]
   },
-  "src/views/MultiView.vue": {
-    "file": "assets/MultiView-DQCRtPG7.js",
-    "name": "MultiView",
-    "src": "src/views/MultiView.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "index.html",
-      "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-DUpFnHsr.js"
-    ]
-  },
   "src/views/NotFoundView.vue": {
-    "file": "assets/NotFoundView-CaPK8hUU.js",
+    "file": "assets/NotFoundView-mNnyFEmq.js",
     "name": "NotFoundView",
     "src": "src/views/NotFoundView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-DUpFnHsr.js"
+      "_compiler-sfc-CHbDt8t7.js"
     ]
   },
-  "src/views/SingleView.vue": {
-    "file": "assets/SingleView-BkLAA9T_.js",
-    "name": "SingleView",
-    "src": "src/views/SingleView.vue",
+  "src/views/PageView.vue": {
+    "file": "assets/PageView-Bc8__PDR.js",
+    "name": "PageView",
+    "src": "src/views/PageView.vue",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
       "_sucrase-DTaNgZ3p.js",
-      "_compiler-sfc-DUpFnHsr.js"
+      "_compiler-sfc-CHbDt8t7.js"
+    ]
+  },
+  "src/views/RootView.vue": {
+    "file": "assets/RootView-Bo1pisMY.js",
+    "name": "RootView",
+    "src": "src/views/RootView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_sucrase-DTaNgZ3p.js",
+      "_compiler-sfc-CHbDt8t7.js"
     ]
   }
 }
