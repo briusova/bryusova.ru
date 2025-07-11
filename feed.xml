@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Психолог Александра Брюсова</title>
+  <id>https://bryusova.ru/feed.xml</id>
+  <updated>2025-07-11T15:31:39.225Z</updated>
+  <link rel="self" type="application/atom+xml" href="https://bryusova.ru/feed.xml"/>
+  <link rel="alternate" type="application/json" href="https://bryusova.ru/feed.json"/>
+  <link rel="alternate" type="text/html" href="https://bryusova.ru"/>
+  <generator uri="https://github.com/bcomnes/jsonfeed-to-atom#readme" version="1.2.5">jsonfeed-to-atom</generator>
+  <entry>
+    <id>49603848-a24a-4160-bed9-081c72935a77</id>
+    <title>test</title>
+    <updated>2025-07-11T15:31:39.225Z</updated>
+    <published>2025-07-11T15:31:39.225Z</published>
+    <content type="html"><![CDATA[test&nbsp;]]></content>
+  </entry>
+</feed>
