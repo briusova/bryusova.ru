@@ -2,9 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Психолог Александра Брюсова</title>
   <id>https://bryusova.ru/feed.xml</id>
-  <updated>2025-07-11T15:39:28.806Z</updated>
+  <updated>2025-07-12T13:10:04.808Z</updated>
   <link rel="self" type="application/atom+xml" href="https://bryusova.ru/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://bryusova.ru/feed.json"/>
   <link rel="alternate" type="text/html" href="https://bryusova.ru"/>
   <generator uri="https://github.com/bcomnes/jsonfeed-to-atom#readme" version="1.2.5">jsonfeed-to-atom</generator>
+  <entry>
+    <id>e0d7fa07-5f87-4c8d-98b1-af739d401086</id>
+    <title>Взрослеем. Теперь у нас есть RSS</title>
+    <updated>2025-07-12T13:10:04.808Z</updated>
+    <published>2025-07-12T13:10:04.808Z</published>
+    <content type="html"><![CDATA[просто текст]]></content>
+  </entry>
 </feed>
