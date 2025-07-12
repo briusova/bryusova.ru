@@ -6,7 +6,7 @@
     <link>https://bryusova.ru</link>
     <language>en-us</language>
     <copyright>© 2025 </copyright>
-    <pubDate>Sat, 12 Jul 2025 13:10:04 GMT</pubDate>
+    <pubDate>Sat, 12 Jul 2025 13:15:38 GMT</pubDate>
     <generator>jsonfeed-to-rss 3.0.8 (https://github.com/bcomnes/jsonfeed-to-rss#readme)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <item>
@@ -15,6 +15,13 @@
       <content:encoded><![CDATA[просто текст]]></content:encoded>
       <guid isPermaLink="false">e0d7fa07-5f87-4c8d-98b1-af739d401086</guid>
       <pubDate>Sat, 12 Jul 2025 13:10:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>test222</title>
+      <description>34druxdtujcfi</description>
+      <content:encoded><![CDATA[34druxdtujcfi]]></content:encoded>
+      <guid isPermaLink="false">5abcc1e0-9ff1-4889-bdf2-ddaafc240b66</guid>
+      <pubDate>Sat, 12 Jul 2025 13:15:38 GMT</pubDate>
     </item>
   </channel>
 </rss>
