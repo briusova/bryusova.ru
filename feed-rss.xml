@@ -6,25 +6,8 @@
     <link>https://bryusova.ru</link>
     <language>en-us</language>
     <copyright>© 2025 </copyright>
-    <pubDate>Sun, 13 Jul 2025 16:06:50 GMT</pubDate>
+    <pubDate>Sun, 13 Jul 2025 16:28:14 GMT</pubDate>
     <generator>jsonfeed-to-rss 3.0.8 (https://github.com/bcomnes/jsonfeed-to-rss#readme)</generator>
     <docs>http://www.rssboard.org/rss-specification</docs>
-    <item>
-      <title>test 111</title>
-      <link>https://bryusova.ru/тезисы/</link>
-      <description>test test 11 hhh</description>
-      <content:encoded><![CDATA[test test 11 hhh]]></content:encoded>
-      <guid isPermaLink="false">903c03bf-0cf9-4a9e-b610-4a7cce00fd4e</guid>
-      <pubDate>Sun, 13 Jul 2025 16:03:08 GMT</pubDate>
-      <enclosure type="image/png" url="https://bryusova.ru/images/Снимок экрана 2025-06-17 212458.q3d20q3z9nf.png"/>
-    </item>
-    <item>
-      <title>test 222</title>
-      <link>https://bryusova.ru/услуги/консультации/прогноз/</link>
-      <description>tast 222</description>
-      <content:encoded><![CDATA[tast 222]]></content:encoded>
-      <guid isPermaLink="false">a7bbf1ea-38d5-4229-ade2-4a14aeefca1f</guid>
-      <pubDate>Sun, 13 Jul 2025 16:06:50 GMT</pubDate>
-    </item>
   </channel>
 </rss>

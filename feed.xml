@@ -2,26 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Психолог Александра Брюсова</title>
   <id>https://bryusova.ru/feed.xml</id>
-  <updated>2025-07-13T16:06:50.442Z</updated>
+  <updated>2025-07-13T16:28:14.091Z</updated>
   <link rel="self" type="application/atom+xml" href="https://bryusova.ru/feed.xml"/>
   <link rel="alternate" type="application/json" href="https://bryusova.ru/feed.json"/>
   <link rel="alternate" type="text/html" href="https://bryusova.ru"/>
   <generator uri="https://github.com/bcomnes/jsonfeed-to-atom#readme" version="1.2.5">jsonfeed-to-atom</generator>
-  <entry>
-    <id>903c03bf-0cf9-4a9e-b610-4a7cce00fd4e</id>
-    <title>test 111</title>
-    <updated>2025-07-13T16:03:08.554Z</updated>
-    <published>2025-07-13T16:03:08.554Z</published>
-    <content type="html"><![CDATA[test test 11 hhh]]></content>
-    <link rel="alternate" href="https://bryusova.ru/тезисы/"/>
-    <link rel="enclosure" type="image/png" href="https://bryusova.ru/images/Снимок экрана 2025-06-17 212458.q3d20q3z9nf.png"/>
-  </entry>
-  <entry>
-    <id>a7bbf1ea-38d5-4229-ade2-4a14aeefca1f</id>
-    <title>test 222</title>
-    <updated>2025-07-13T16:06:50.442Z</updated>
-    <published>2025-07-13T16:06:50.442Z</published>
-    <content type="html"><![CDATA[tast 222]]></content>
-    <link rel="alternate" href="https://bryusova.ru/услуги/консультации/прогноз/"/>
-  </entry>
 </feed>
