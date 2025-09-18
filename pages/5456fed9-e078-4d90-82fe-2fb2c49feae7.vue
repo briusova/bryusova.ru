@@ -64,11 +64,11 @@
     </section>
 </template>
 <script setup vapor>
-import { vIntersectionObserver } from "@vueuse/components";
+//import { vIntersectionObserver } from "@vueuse/components";
 import { inject, ref } from "vue";
 import { Right } from '@element-plus/icons-vue';
-const { id } = defineProps(["id"]);
+const { pid: id } = defineProps(["pid"]);
 const pages = inject("pages");
 const the = pages[id];
-const anima = ref(false);
+//const anima = ref(false);
 </script>

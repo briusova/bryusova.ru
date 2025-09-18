@@ -104,7 +104,7 @@
 <script setup vapor>
 import { inject } from "vue";
 import { ArrowLeft } from '@element-plus/icons-vue';
-const { id } = defineProps(["id"]);
+const { pid: id } = defineProps(["pid"]);
 const pages = inject("pages");
 const the = pages[id];
 </script>

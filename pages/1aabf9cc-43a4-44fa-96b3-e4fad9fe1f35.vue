@@ -127,7 +127,7 @@
 
 <script setup vapor>
 import { inject } from "vue";
-const { id } = defineProps(["id"]);
+const { pid: id } = defineProps(["pid"]);
 const pages = inject("pages");
 const the = pages[id];
 const { location: { origin } } = window;

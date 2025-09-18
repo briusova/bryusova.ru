@@ -59,7 +59,7 @@
         <h4 class="text-gray-800 text-lg font-medium">{{ item.title }}</h4>
         <div class="mt-3 flex items-center gap-x-3">
           <icon class="text-gray-400 size-7" :icon="item.icon"></icon>
-          <router-link :target="item.target &amp;&amp; '_blank'" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</router-link>
+          <a target="_blank" rel="noopener noreferrer" :href="item.href">{{ item.contact }}</a>
         </div>
       </li>
     </ul>
@@ -77,7 +77,7 @@
 import { ref, inject, computed } from "vue";
 //import { ElMessage } from "element-plus";
 
-const { id } = defineProps(["id"]),
+const { pid: id } = defineProps(["pid"]),
   the = inject("pages")[id],
   /*formRef = ref(),
   method = "POST",
