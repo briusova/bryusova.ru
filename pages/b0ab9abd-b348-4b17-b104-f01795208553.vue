@@ -132,6 +132,12 @@ const currentTestimonial = ref(0),
         desc: "Школа развития эмоций",
         src: "images/d3fb8e56-9759-431d-b77f-898345357982.jpeg"
     },
+    {
+        name: "Имя как ресурс",
+        date: "2025 год",
+        desc: "Международная школа Арт-терапии",
+        src: "images/name.jpg"
+    },
     ]);
 const previewSrcList = cert.map(({ src, src2 }) => src2 ?? src);
 </script>
