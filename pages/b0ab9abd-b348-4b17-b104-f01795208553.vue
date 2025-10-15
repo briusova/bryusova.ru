@@ -136,7 +136,7 @@ const currentTestimonial = ref(0),
         name: "Имя как ресурс",
         date: "2025 год",
         desc: "Международная школа Арт-терапии",
-        src: "images/name.jpg"
+        src: "my_images/name.jpg"
     },
     ]);
 const previewSrcList = cert.map(({ src, src2 }) => src2 ?? src);
