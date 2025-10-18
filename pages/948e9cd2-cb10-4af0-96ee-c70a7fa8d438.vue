@@ -98,7 +98,7 @@ const contactMethods = [
   },
   {
     icon: "mdi:envelope-outline",
-    href: "mailto:briusova@gmail.com",
+    href: "mailto:alexandra.bryusova@yandex.ru",
   },
   {
     icon: "mdi:telegram",
