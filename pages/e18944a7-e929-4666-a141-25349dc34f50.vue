@@ -113,9 +113,9 @@ const { pid: id } = defineProps(["pid"]),
     },
      {
       icon: "la:envelope",
-      contact: "briusova@gmail.com",
+      contact: "alexandra.bryusova@yandex.ru",
       title: "E-mail",
-      href: "mailto:briusova@gmail.com",
+      href: "mailto:alexandra.bryusova@yandex.ru",
     },
   ];
   //throttledFn = useThrottleFn(sendForm, 6000);
