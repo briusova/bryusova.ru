@@ -39,7 +39,7 @@
 <script setup vapor>
 import { ref, reactive, inject } from "vue";
 
-const { pid: id } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const the = inject("pages")[id];
 const currentTestimonial = ref(0),
     cert = reactive([{

@@ -77,7 +77,7 @@
 import { ref, inject, computed } from "vue";
 //import { ElMessage } from "element-plus";
 
-const { pid: id } = defineProps(["pid"]),
+const { id } = defineProps(["id"]),
   the = inject("pages")[id],
   /*formRef = ref(),
   method = "POST",

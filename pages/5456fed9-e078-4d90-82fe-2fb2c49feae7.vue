@@ -67,7 +67,7 @@
 //import { vIntersectionObserver } from "@vueuse/components";
 import { inject, ref } from "vue";
 import { Right } from '@element-plus/icons-vue';
-const { pid: id } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
 //const anima = ref(false);

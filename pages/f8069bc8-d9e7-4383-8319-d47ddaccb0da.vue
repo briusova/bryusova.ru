@@ -78,7 +78,7 @@
 <script setup vapor>
 import { inject } from "vue";
 
-const { pid: id } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const the = inject("pages")[id];
 const person = {
     men: {

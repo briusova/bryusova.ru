@@ -82,7 +82,7 @@ import ElementPlus from "element-plus";
 const { appContext: { app } } = getCurrentInstance();
 app.use(ElementPlus);
 app.component("Icon", Icon);
-const { pid: id } = defineProps(["pid"]);
+const { id } = defineProps(["id"]);
 const pages = inject("pages");
 const the = pages[id];
 const docs = computed(() => the.children.find(({ name }) => name === "документы"));
