@@ -7,8 +7,8 @@
                 <p>Написать свой отзыв Вы можете здесь: <a href="https://vk.com/topic-219123587_49317175"
                         target="_blank" rel="noopener noreferrer" text-cyan-600=""
                         hover:text-blue-600="">https://vk.com/topic-219123587_49317175</a> или пришлите отзыв с пометкой
-                    "<b>анонимно</b>" на <a href="mailto:briusova@gmail.com" text-cyan-600=""
-                        hover:text-blue-600="">briusova@gmail.com</a></p>
+                    "<b>анонимно</b>" на <a href="mailto:alexandra.bryusova@yandex.ru" text-cyan-600=""
+                        hover:text-blue-600="">alexandra.bryusova@yandex.ru</a></p>
             </div>
             <div class="mt-12 px-4 rounded-md border-l-4 border-red-500 bg-red-50 md:max-w-2xl">
                 <div class="flex justify-between py-3">
