@@ -28,7 +28,7 @@ icon: twemoji:page-facing-up
 
 * :icon{icon="mdi:checkbox-marked-circle-outline"} консультация с МАК-картами
 
-* :icon{icon="mdi:checkbox-marked-circle-outline"} отпуск с психологом
+* :icon{icon="mdi:checkbox-marked-circle-outline"} индивидуальное сопровождение
 
 :::
 
